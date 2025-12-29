@@ -95,20 +95,15 @@ const DrawnPortfolio = ({ onAnimationComplete }) => {
     );
   }, [onAnimationComplete]);
 
-  const textStyle = {
-    fontSize: "clamp(4rem, 10vw, 8rem)",
-    fontFamily: "Georama, sans-serif",
-    fontStyle: "italic",
-    fontWeight: 400,
-  };
-
   return (
-    <div ref={containerRef} className="relative mt-7">
+    <div
+      ref={containerRef}
+      className="relative mt-7 h-[1em] w-full text-9xl font-georama italic"
+    >
       <span
         ref={strokeRef}
-        className="text-transparent"
+        className="text-transparent absolute left-1/2 -translate-x-1/2 top-0 text-9xl font-georama italic leading-none"
         style={{
-          ...textStyle,
           WebkitTextStroke: "2px #e5e7eb",
         }}
       >
@@ -116,8 +111,7 @@ const DrawnPortfolio = ({ onAnimationComplete }) => {
       </span>
       <span
         ref={fillRef}
-        className="absolute left-0 top-0 text-gray-200"
-        style={textStyle}
+        className="absolute left-1/2 -translate-x-1/2 top-0 text-gray-200 text-9xl font-georama italic leading-none"
       >
         Portfolio
       </span>
@@ -148,8 +142,8 @@ const Welcome = () => {
     <section id="welcome">
       <p ref={subtitleRef}>
         {renderText(
-          "Hey, I'm Justin! Welcome to my",
-          "text-4xl italic font-georama",
+          "Hey, I'm Justin! Welcome to my software",
+          "text-5xl italic font-georama",
           100
         )}
       </p>
@@ -157,7 +151,11 @@ const Welcome = () => {
         <DrawnPortfolio onAnimationComplete={() => setAnimationDone(true)} />
       ) : (
         <h1 ref={titleRef} className="mt-7">
-          {renderText("Portfolio", "text-9xl italic font-georama text-gray-200", 400)}
+          {renderText(
+            "Portfolio",
+            "text-9xl italic font-georama text-gray-200",
+            400
+          )}
         </h1>
       )}
       <div className="small-screen">

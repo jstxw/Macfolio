@@ -1,25 +1,39 @@
 import { useGSAP } from "@gsap/react";
 import { dockApps } from "../constants";
 import { useRef } from "react";
-import { Tooltip } from "react-tooltip";
 import gsap from "gsap";
+import useWindowStore from "./Store";
 
 const Dock = () => {
+  const { openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    // Entrance animation - slide up from bottom after 1s
+    gsap.fromTo(
+      sectionRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, delay: 1, ease: "power3.out" }
+    );
+  }, []);
 
   useGSAP(() => {
     const dock = dockRef.current;
     if (!dock) return () => {};
 
-    const icons = dock.querySelectorAll(".dock-icon");
+    const items = dock.querySelectorAll(".dock-item");
     const { left } = dock.getBoundingClientRect();
 
-    const animateIcons = (mouseX) => {
-      icons.forEach((icon) => {
-        const { left: iconLeft, width } = icon.getBoundingClientRect();
-        const center = iconLeft - left + width / 2;
+    const animateItems = (mouseX) => {
+      items.forEach((item) => {
+        const { left: itemLeft, width } = item.getBoundingClientRect();
+        const center = itemLeft - left + width / 2;
         const distance = Math.abs(mouseX - center);
         const intensity = Math.exp(-(distance ** 2) / 5000);
+
+        const icon = item.querySelector(".dock-icon");
+        const label = item.querySelector(".dock-label");
 
         gsap.to(icon, {
           scale: 1 + 0.25 * intensity,
@@ -27,14 +41,29 @@ const Dock = () => {
           duration: 0.2,
           ease: "power1.out",
         });
+
+        gsap.to(label, {
+          scale: 1 + 0.3 * intensity,
+          duration: 0.2,
+          ease: "power1.out",
+        });
       });
     };
 
-    const resetIcons = () => {
-      icons.forEach((icon) => {
+    const resetItems = () => {
+      items.forEach((item) => {
+        const icon = item.querySelector(".dock-icon");
+        const label = item.querySelector(".dock-label");
+
         gsap.to(icon, {
           scale: 1,
           y: 0,
+          duration: 0.2,
+          ease: "power1.out",
+        });
+
+        gsap.to(label, {
+          scale: 1,
           duration: 0.2,
           ease: "power1.out",
         });
@@ -43,31 +72,40 @@ const Dock = () => {
 
     const handleMouseMove = (e) => {
       const mouseX = e.clientX - left;
-      animateIcons(mouseX);
+      animateItems(mouseX);
     };
 
     dock.addEventListener("mousemove", handleMouseMove);
-    dock.addEventListener("mouseleave", resetIcons);
+    dock.addEventListener("mouseleave", resetItems);
 
     return () => {
       dock.removeEventListener("mousemove", handleMouseMove);
-      dock.removeEventListener("mouseleave", resetIcons);
+      dock.removeEventListener("mouseleave", resetItems);
     };
   }, []);
-  const toggleApp = (app) => {};
+  const toggleApp = (app) => {
+    if (!app.canOpen) return;
+
+    const window = windows[app.id];
+
+    if (window.isOpen) {
+      closeWindow(app.id);
+    } else {
+      openWindow(app.id);
+    }
+
+    console.log(windows);
+  };
 
   return (
-    <section id="dock">
+    <section id="dock" ref={sectionRef} className="opacity-0">
       <div ref={dockRef} className="dock-container">
         {dockApps.map(({ id, name, icon, canOpen }) => (
-          <div key={id} className="relative flex justify-center">
+          <div key={id} className="dock-item flex flex-col items-center">
             <button
               type="button"
               className="dock-icon"
               aria-label={name}
-              data-tooltip-id="dock-tooltip"
-              data-tooltip-content={name}
-              data-tooltip-delay-show={150}
               disabled={!canOpen}
               onClick={() => toggleApp({ id, canOpen })}
             >
@@ -78,9 +116,11 @@ const Dock = () => {
                 className={canOpen ? "" : "opacity-60"}
               />
             </button>
+            <span className="dock-label text-white text-xs font-georama">
+              {name}
+            </span>
           </div>
         ))}
-        <Tooltip id="dock-tooltip" place="top" className="tooltip" />
       </div>
     </section>
   );

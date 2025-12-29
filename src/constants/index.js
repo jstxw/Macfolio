@@ -3,18 +3,18 @@
 const navLinks = [
   {
     id: 1,
-    name: "Projects",
-    type: "finder",
+    name: "Github",
+    type: "Github",
   },
   {
     id: 3,
-    name: "Contact",
-    type: "contact",
+    name: "Linkedin",
+    type: "Linkedin",
   },
   {
     id: 4,
-    name: "Resume",
-    type: "resume",
+    name: "Twitter",
+    type: "Twitter",
   },
 ];
 
@@ -40,20 +40,26 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "About Me", 
     icon: "finder.png",
     canOpen: true,
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Projects", // was "Safari"
     icon: "safari.png",
     canOpen: true,
   },
   {
     id: "photos",
-    name: "Gallery", // was "Photos"
+    name: "Photography", // was "Photos"
     icon: "photos.png",
+    canOpen: true,
+  },
+   {
+    id: "terminal",
+    name: "Technology", // was "Terminal"
+    icon: "terminal.png",
     canOpen: true,
   },
   {
@@ -62,18 +68,8 @@ const dockApps = [
     icon: "contact.png",
     canOpen: true,
   },
-  {
-    id: "terminal",
-    name: "Skills", // was "Terminal"
-    icon: "terminal.png",
-    canOpen: true,
-  },
-  {
-    id: "trash",
-    name: "Archive", // was "Trash"
-    icon: "trash.png",
-    canOpen: false,
-  },
+ 
+  
 ];
 
 const blogPosts = [

@@ -39,7 +39,7 @@ body {
   }
 
   nav {
-    @apply flex w-full justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex w-full justify-between items-center bg-white/50 backdrop-blur-3xl py-3 px-5 select-none;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
