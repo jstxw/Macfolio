@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -21,7 +21,7 @@ const renderText = (text, className, baseWeight = 400) => {
 };
 
 const setupTextHover = (container, type) => {
-  if (!container) return;
+  if (!container) return () => {};
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
@@ -46,6 +46,7 @@ const setupTextHover = (container, type) => {
   };
   const handleMouseLeave = () =>
     letters.forEach((letter) => animateLetter(letter, base, 0.3));
+
   container.addEventListener("mousemove", handleMouseMovement);
   container.addEventListener("mousemove", handleMouseLeave);
 
@@ -55,18 +56,94 @@ const setupTextHover = (container, type) => {
   };
 };
 
+const DrawnPortfolio = ({ onAnimationComplete }) => {
+  const containerRef = useRef(null);
+  const strokeRef = useRef(null);
+  const fillRef = useRef(null);
+
+  useEffect(() => {
+    const strokeText = strokeRef.current;
+    const fillText = fillRef.current;
+    if (!strokeText || !fillText) return;
+
+    gsap.set(strokeText, { clipPath: "inset(0 100% 0 0)" });
+    gsap.set(fillText, { opacity: 0 });
+
+    const tl = gsap.timeline();
+
+    tl.to(strokeText, {
+      clipPath: "inset(0 0% 0 0)",
+      duration: 2,
+      ease: "power2.inOut",
+    });
+
+    tl.to(fillText, {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power2.out",
+    });
+
+    tl.to(
+      strokeText,
+      {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        onComplete: () => onAnimationComplete?.(),
+      },
+      "<"
+    );
+  }, [onAnimationComplete]);
+
+  const textStyle = {
+    fontSize: "clamp(4rem, 10vw, 8rem)",
+    fontFamily: "Georama, sans-serif",
+    fontStyle: "italic",
+    fontWeight: 400,
+  };
+
+  return (
+    <div ref={containerRef} className="relative mt-7">
+      <span
+        ref={strokeRef}
+        className="text-transparent"
+        style={{
+          ...textStyle,
+          WebkitTextStroke: "2px #e5e7eb",
+        }}
+      >
+        Portfolio
+      </span>
+      <span
+        ref={fillRef}
+        className="absolute left-0 top-0 text-gray-200"
+        style={textStyle}
+      >
+        Portfolio
+      </span>
+    </div>
+  );
+};
+
 const Welcome = () => {
-  const titleref = useRef(null);
   const subtitleRef = useRef(null);
-  //so the useref hook in react basically allows you to reference and change items withoutn rerender
+  const titleRef = useRef(null);
+  const [animationDone, setAnimationDone] = useState(false);
 
   useGSAP(() => {
-    const titleCleaup = setupTextHover(titleref.current, "title");
     const subtitleCleanup = setupTextHover(subtitleRef.current, "subtitle");
     return () => {
-      subtitleCleanup(), titleCleaup();
+      subtitleCleanup();
     };
   }, []);
+
+  useEffect(() => {
+    if (animationDone && titleRef.current) {
+      const titleCleanup = setupTextHover(titleRef.current, "title");
+      return () => titleCleanup();
+    }
+  }, [animationDone]);
+
   return (
     <section id="welcome">
       <p ref={subtitleRef}>
@@ -76,9 +153,13 @@ const Welcome = () => {
           100
         )}
       </p>
-      <h1 ref={titleref} className="mt-7">
-        {renderText("Portfolio", "text-9xl italic font-georama")}
-      </h1>
+      {!animationDone ? (
+        <DrawnPortfolio onAnimationComplete={() => setAnimationDone(true)} />
+      ) : (
+        <h1 ref={titleRef} className="mt-7">
+          {renderText("Portfolio", "text-9xl italic font-georama text-gray-200", 400)}
+        </h1>
+      )}
       <div className="small-screen">
         <p>This portfolio is designed for desktop/tablet screens only.</p>
       </div>
