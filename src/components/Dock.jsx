@@ -5,7 +5,7 @@ import gsap from "gsap";
 import useWindowStore from "../store/Store";
 
 const Dock = () => {
-  const { openWindow, closeWindow, windows } = useWindowStore();
+  const { openWindow, closeWindow, restoreWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
   const sectionRef = useRef(null);
 
@@ -86,15 +86,21 @@ const Dock = () => {
   const toggleApp = (app) => {
     if (!app.canOpen) return;
 
-    const window = windows[app.id];
+    const win = windows[app.id];
 
-    if (window.isOpen) {
+    if (!win) {
+      console.error("Window not found for id:", app.id);
+      return;
+    }
+
+    if (win.isMinimized) {
+      // Restore minimized window
+      restoreWindow(app.id);
+    } else if (win.isOpen) {
       closeWindow(app.id);
     } else {
       openWindow(app.id);
     }
-
-    console.log(windows);
   };
 
   return (

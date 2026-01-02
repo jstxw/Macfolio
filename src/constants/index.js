@@ -99,28 +99,16 @@ const blogPosts = [
 
 const techStack = [
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    category: "Languages",
+    items: ["Python", "Javascript", "Typescript", "JSX", "HTML/CSS", "Tailwind CSS", "SQL", "C++"],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "Tools/Platforms",
+    items: ["Google Computing Services", "Firebase", "Git", "Docker", "MongoDB", "PineconeDB", "Auth0", "Microsoft Azure", "Github Actions", "Redis", "Supabase", "AWS S3", "Expo"],
   },
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Frameworks",
+    items: ["React.js", "React Native", "Next.js", "Express.js", "FastAPI", "NodeJS", "Langchain", "Pandas", "NumPY", "GraphQL"],
   },
 ];
 
@@ -491,14 +479,11 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  About_Me: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  Projects: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  //resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  Photography: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  Technology: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  //txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  //imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  About_Me: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Projects: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Photography: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Technology: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Contact: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
