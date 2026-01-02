@@ -7,6 +7,7 @@ import Dock from "./components/Dock";
 import BackgroundSelector from "./components/BackgroundSelector";
 import { Draggable } from "gsap/draggable";
 import Terminal from "./windows/terminal";
+import AboutMe from "./windows/AboutMe";
 gsap.registerPlugin(Draggable);
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
         onSelect={handleBackgroundChange}
       />
       <Terminal />
+      <AboutMe />
     </main>
   );
 }

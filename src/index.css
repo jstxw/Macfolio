@@ -220,6 +220,19 @@ body {
     }
   }
 
+  #aboutme {
+    @apply w-7xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+    font-family: 'Georama', sans-serif;
+
+    h2 {
+      @apply font-bold text-lg text-center w-full;
+    }
+
+    .about-content {
+      @apply bg-white;
+    }
+  }
+
   #contact {
     @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
