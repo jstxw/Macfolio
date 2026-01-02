@@ -9,7 +9,7 @@ const useWindowStore = create(
   immer((set) => ({
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
-
+    // window key is found inside index.js
     openWindow: (windowKey, data = null) =>
       set((state) => {
         const win = state.windows[windowKey];
@@ -31,25 +31,6 @@ const useWindowStore = create(
       set((state) => {
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex++;
-      }),
-
-    minimizeWindow: (windowKey) =>
-      set((state) => {
-        const win = state.windows[windowKey];
-        win.isMinimized = true;
-      }),
-
-    restoreWindow: (windowKey) =>
-      set((state) => {
-        const win = state.windows[windowKey];
-        win.isMinimized = false;
-        win.zIndex = state.nextZIndex++;
-      }),
-
-    toggleMaximize: (windowKey) =>
-      set((state) => {
-        const win = state.windows[windowKey];
-        win.isMaximized = !win.isMaximized;
       }),
   }))
 );

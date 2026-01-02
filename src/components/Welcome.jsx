@@ -39,7 +39,7 @@ const setupTextHover = (container, type) => {
     letters.forEach((letter) => {
       const { left: l, width: w } = letter.getBoundingClientRect();
       const distance = Math.abs(mouseX - (l - left + w / 2));
-      const intensity = Math.exp(-(distance ** 2) / 12000);
+      const intensity = Math.exp(-(distance ** 1.5) / 12000);
 
       animateLetter(letter, min + (max - min) * intensity);
     });
@@ -152,7 +152,7 @@ const Welcome = () => {
       ) : (
         <h1 ref={titleRef} className="mt-7">
           {renderText(
-            "Portfolio",
+            "Portfolio.",
             "text-9xl italic font-georama text-gray-200",
             400
           )}

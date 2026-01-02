@@ -6,8 +6,10 @@ import Welcome from "./components/Welcome";
 import Dock from "./components/Dock";
 import BackgroundSelector from "./components/BackgroundSelector";
 import { Draggable } from "gsap/draggable";
-import Terminal from "./windows/terminal";
+import Terminal from "./windows/Terminal";
 import AboutMe from "./windows/AboutMe";
+import Contact from "./windows/Contact";
+import Projects from "./windows/Projects";
 gsap.registerPlugin(Draggable);
 
 function App() {
@@ -69,6 +71,8 @@ function App() {
       />
       <Terminal />
       <AboutMe />
+      <Contact />
+      <Projects />
     </main>
   );
 }

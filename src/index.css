@@ -165,55 +165,55 @@ body {
   }
 
   #terminal {
-    @apply w-4xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+    @apply w-6xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
 
     h2 {
-      @apply font-bold text-lg text-center w-full;
+      @apply font-bold text-xl text-center w-full;
     }
 
     .techstack {
-      @apply text-base font-roboto p-8;
+      @apply text-xl font-roboto p-12;
 
       .label {
-        @apply flex items-start mt-8;
+        @apply flex items-start mt-10;
 
         p:first-child {
-          @apply w-6 flex-shrink-0;
+          @apply w-8 flex-shrink-0;
         }
 
         p:nth-child(2) {
-          @apply w-48 ms-2 flex-shrink-0;
+          @apply w-56 ms-3 flex-shrink-0;
         }
       }
 
       .content {
-        @apply py-6 my-6 border-y border-dashed space-y-4;
+        @apply py-8 my-8 border-y border-dashed space-y-6;
 
         li {
           @apply flex items-start;
 
           .check {
-            @apply text-[#00A154] w-6 text-lg flex-shrink-0;
+            @apply text-[#00A154] w-8 text-2xl flex-shrink-0;
           }
 
           h3 {
-            @apply font-semibold text-[#00A154] w-48 ms-2 text-base flex-shrink-0;
+            @apply font-semibold text-[#00A154] w-56 ms-3 text-xl flex-shrink-0;
           }
 
           ul {
-            @apply flex flex-wrap items-center gap-x-3 gap-y-1 text-base;
+            @apply flex flex-wrap items-center gap-x-4 gap-y-2 text-xl;
           }
         }
       }
 
       .footnote {
-        @apply text-[#00A154] space-y-1;
+        @apply text-[#00A154] space-y-2;
 
         p {
-          @apply flex items-center text-base;
+          @apply flex items-center text-xl;
 
           svg {
-            @apply w-6 me-6;
+            @apply w-8 me-8;
           }
         }
       }
@@ -233,7 +233,146 @@ body {
     }
   }
 
-  #contact {
+  #projects-window {
+    @apply w-7xl bg-stone-50 shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+  }
+
+  .portfolio-container {
+    @apply px-12 py-10 max-h-[80vh] overflow-y-auto;
+  }
+
+  .portfolio-header {
+    @apply mb-10;
+  }
+
+  .portfolio-header h1 {
+    @apply text-6xl font-black tracking-tight text-stone-900 mb-4;
+    font-family: "Georama", sans-serif;
+  }
+
+  .header-line {
+    @apply w-full h-px bg-stone-300;
+  }
+
+  .projects-grid {
+    @apply flex flex-col gap-8;
+  }
+
+  .project-card {
+    @apply flex gap-8 p-6 bg-white rounded-2xl no-underline transition-all duration-300 border border-stone-100;
+  }
+
+  .project-card:hover {
+    @apply shadow-xl border-stone-200;
+    transform: translateY(-4px);
+  }
+
+  .project-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .project-card:hover .view-project {
+    @apply text-stone-900;
+  }
+
+  .project-card:hover .view-project svg {
+    transform: translate(4px, -4px);
+  }
+
+  .card-image {
+    @apply w-80 h-48 flex-shrink-0 rounded-xl overflow-hidden bg-stone-100;
+  }
+
+  .card-image img {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+
+  .image-placeholder {
+    @apply w-full h-full flex items-center justify-center bg-gradient-to-br from-stone-100 to-stone-200;
+  }
+
+  .image-placeholder span {
+    @apply text-5xl font-light text-stone-300;
+  }
+
+  .card-content {
+    @apply flex flex-col justify-center flex-1 py-2;
+  }
+
+  .project-year {
+    @apply text-sm font-medium text-stone-400 uppercase tracking-widest mb-2;
+  }
+
+  .project-title {
+    @apply text-2xl font-semibold text-stone-900 mb-3;
+    font-family: "Georama", sans-serif;
+  }
+
+  .project-description {
+    @apply text-base text-stone-500 leading-relaxed mb-4;
+  }
+
+  .project-tech {
+    @apply flex flex-wrap items-center gap-2 mb-4;
+  }
+
+  .project-tech span {
+    @apply text-xs font-medium text-stone-400 uppercase tracking-wider px-3 py-1 bg-stone-100 rounded-full;
+  }
+
+  .view-project {
+    @apply flex items-center gap-2 text-sm font-medium text-stone-400 transition-colors duration-300 mt-auto;
+  }
+
+  .view-project svg {
+    @apply transition-transform duration-300;
+  }
+
+  #contact-window {
+    @apply w-4xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+
+    h2 {
+      @apply font-bold text-lg text-center w-full;
+    }
+
+    .contact-content {
+      @apply p-10 space-y-8;
+
+      .contact-header {
+        @apply text-center space-y-2;
+
+        h3 {
+          @apply text-3xl font-bold text-gray-800;
+        }
+
+        p {
+          @apply text-lg text-gray-500;
+        }
+      }
+
+      .contact-links {
+        @apply flex justify-center gap-6;
+
+        .contact-link {
+          @apply flex flex-col items-center gap-3 px-8 py-6 rounded-xl text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+
+          span {
+            @apply text-base font-medium;
+          }
+        }
+      }
+
+      .contact-footer {
+        @apply text-center space-y-1 pt-4 border-t border-gray-100;
+
+        p {
+          @apply text-base text-gray-400;
+        }
+      }
+    }
+  }
+
+  #contact-old {
     @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {

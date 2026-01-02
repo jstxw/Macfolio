@@ -1,5 +1,10 @@
 import WindowWrapper from "../hoc/WindowWrapper";
 import WindowControls from "../components/WindowControls";
+import LogicsLogo from "../assets/Logics.png";
+import WaterlooLogo from "../assets/Waterloo.png";
+import MelomedLogo from "../assets/Melomed.png";
+import PlumaLogo from "../assets/Pluma_Icon.png";
+import SummerHacksLogo from "../assets/SummerHacks.png";
 
 const AboutMe = ({ closeWindow, minimizeWindow }) => {
   // Easy to edit content
@@ -16,15 +21,20 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
       content: (
         <>
           Software/Cloud Engineer @{" "}
-          <span className="relative inline-block group">
+          <a
+            href="https://logicstechnology.com/?srsltid=AfmBOooEudhE-FzF7wx5ztd2jQGJ8fxX9y4ng-2kuaQBd7czcqTcEtx1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group no-underline"
+          >
             <img
-              src="../assets/Logics.png"
+              src={LogicsLogo}
               alt="Logics Technology"
               className="inline-block w-6 h-6 mr-2 align-middle"
             />
             Logics Technology
             <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-          </span>
+          </a>
         </>
       ),
     },
@@ -34,15 +44,20 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
       content: (
         <>
           Management Engineering @{" "}
-          <span className="relative inline-block group">
+          <a
+            href="https://uwaterloo.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group no-underline"
+          >
             <img
-              src="/icons/uwaterloo.png"
+              src={WaterlooLogo}
               alt="UWaterloo"
               className="inline-block w-6 h-6 mr-2 align-middle"
             />
             UWaterloo
             <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-          </span>
+          </a>
         </>
       ),
     },
@@ -52,15 +67,20 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
       content: (
         <>
           Software Developer @{" "}
-          <span className="relative inline-block group">
+          <a
+            href="https://www.melomed.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group no-underline"
+          >
             <img
-              src="/icons/melomed.png"
+              src={MelomedLogo}
               alt="MeloMed"
               className="inline-block w-6 h-6 mr-2 align-middle"
             />
             MeloMed
             <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-          </span>
+          </a>
         </>
       ),
     },
@@ -69,15 +89,20 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
       content: (
         <>
           Organizer @{" "}
-          <span className="relative inline-block group">
+          <a
+            href="https://www.linkedin.com/company/hackthesummer/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group no-underline"
+          >
             <img
-              src="/icons/summerhacks.png"
+              src={SummerHacksLogo}
               alt="SummerHacks"
               className="inline-block w-6 h-6 mr-2 align-middle"
             />
             SummerHacks
             <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-          </span>
+          </a>
         </>
       ),
     },
@@ -86,17 +111,22 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
       content: (
         <>
           Building{" "}
-          <span className="relative inline-block group">
+          <a
+            href="https://github.com/jstxw/Pluma"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group no-underline"
+          >
             <img
-              src="/icons/pluma.png"
+              src={PlumaLogo}
               alt="Pluma"
               className="inline-block w-6 h-6 mr-2 align-middle"
             />
             Pluma
             <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-          </span>{" "}
+          </a>{" "}
           - Helping badminton players improve through structured drills, shot
-          techniques, and interactive 3D training visualizations.
+          techniques, and interactive 3D training visualizations
         </>
       ),
     },
@@ -151,7 +181,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
           {/* Social Icons */}
           <div className="flex items-center justify-center gap-6 mt-8">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/jstxw"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:text-zinc-300 transition-colors"
@@ -170,7 +200,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/justin-tingxuan-wang-677899268/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:text-zinc-300 transition-colors"
@@ -185,7 +215,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
               </svg>
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:j2998wan@uwaterloo.ca"
               className="text-black hover:text-zinc-300 transition-colors"
             >
               <svg
@@ -209,7 +239,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
         <div className="flex-1 flex flex-col gap-8">
           <div>
             <h1 className="relative inline-block group text-5xl font-serif font-bold text-black mb-4">
-              about me
+              about me.
               <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </h1>
           </div>
