@@ -1,7 +1,10 @@
 import { create } from "zustand";
-import { immer } from "zustand/middleware/immer";
-import { INITIAL_Z_INDEX, WINDOW_CONFIG } from "#constants/index.js";
+import { immer } from "zustand/middleware/immer"; //middleware that lets you perform immutable updates
+import { INITIAL_Z_INDEX, WINDOW_CONFIG } from "../constants/index";
 
+//immer is used bc zustand originally deals with immutable data. Meaning, each new state must be a new object
+//if i want to only use one attribute of an object, I will have to first use the spread operator to create a new array/object
+// then destructure the prop
 const useWindowStore = create(
   immer((set) => ({
     windows: WINDOW_CONFIG,

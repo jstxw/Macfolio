@@ -39,31 +39,31 @@ const navIcons = [
 
 const dockApps = [
   {
-    id: "finder",
+    id: "About_Me",
     name: "About Me", 
     icon: "finder.png",
     canOpen: true,
   },
   {
-    id: "safari",
+    id: "Projects",
     name: "Projects", // was "Safari"
     icon: "safari.png",
     canOpen: true,
   },
   {
-    id: "photos",
+    id: "Photography",
     name: "Photography", // was "Photos"
     icon: "photos.png",
     canOpen: true,
   },
    {
-    id: "terminal",
+    id: "Technology",
     name: "Technology", // was "Terminal"
     icon: "terminal.png",
     canOpen: true,
   },
   {
-    id: "contact",
+    id: "Contact",
     name: "Contact", // or "Get in touch"
     icon: "contact.png",
     canOpen: true,
@@ -491,14 +491,14 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  About_Me: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Projects: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  //resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Photography: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  Technology: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  //txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  //imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
