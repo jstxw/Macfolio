@@ -1,4 +1,6 @@
 //where to change data for projects, files, and different lists
+import P1 from "../assets/Photography_Pictures/P1.JPG";
+import P2 from "../assets/Photography_Pictures/P2.JPG";
 
 const navLinks = [
   {
@@ -40,7 +42,7 @@ const navIcons = [
 const dockApps = [
   {
     id: "About_Me",
-    name: "About Me", 
+    name: "About Me",
     icon: "finder.png",
     canOpen: true,
   },
@@ -56,7 +58,7 @@ const dockApps = [
     icon: "photos.png",
     canOpen: true,
   },
-   {
+  {
     id: "Technology",
     name: "Technology", // was "Terminal"
     icon: "terminal.png",
@@ -64,12 +66,13 @@ const dockApps = [
   },
   {
     id: "Contact",
-    name: "Contact", // or "Get in touch"
+    name: "Contact",
     icon: "contact.png",
-    canOpen: true,
+    canOpen: false,
+    link: "mailto:j355wang@uwaterloo.ca",
   },
- 
-  
+
+
 ];
 
 const blogPosts = [
@@ -172,11 +175,9 @@ const photosLinks = [
 ];
 
 const gallery = [
-  // Add your photos here with orientation: "horizontal" or "vertical"
-  // Example:
-  // { id: 1, img: "/images/photo1.jpg", orientation: "horizontal" },
-  // { id: 2, img: "/images/photo2.jpg", orientation: "vertical" },
-];
+  { id: 1, img: P1, orientation: "vertical" },
+  { id: 2, img: P2, orientation: "horizontal" }
+]
 
 export {
   navLinks,

@@ -3,7 +3,7 @@ import WindowControls from "../components/WindowControls";
 
 const Projects = ({ closeWindow, minimizeWindow }) => {
   const projects = [
-    {
+    /*{
       id: 1,
       name: "Pluma",
       description:
@@ -12,31 +12,39 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       github: "https://github.com/jstxw/Pluma",
       live: "https://pluma.app",
       image: null,
+    },*/
+    {
+      id: 1,
+      name: "rainbolt.ai",
+      description:
+        "Built a geolocation inference platform using a multi-stage RAG pipeline with CLIP-based image embeddings leveraging 900K+ entries in Pinecone.  Best UI @ Hack the Valley 2025.",
+      tech: [
+        "Next.js",
+        "FastAPI",
+        "Langchain",
+        "OpenAI CLIP",
+        "Firebase",
+        "Auth0",
+        "Pinecone",
+      ],
+      github: "https://github.com/jstxw/rainbolt.ai",
+      devpost: "https://devpost.com/software/rainbolt-ai",
+      live: "https://rainboltai.vercel.app/",
+      image: null,
     },
     {
       id: 2,
-      name: "rainbolt.ai",
+      name: "RouteTO",
       description:
-        "A smart tool that helps perfect resumes with instant AI-powered feedback on keywords, formatting, and overall impact. Leverages OpenAI to provide actionable suggestions.",
-      tech: ["Next.js", "Tailwind", "OpenAI"],
-      github: "https://github.com/jstxw",
-      devpost: "https://devpost.com/jstxw",
-      live: "https://rainbolt.ai",
+        "RouteTO is a geospatial crime-avoidance routing platform that automatically finds the safest and crime-minimal route between two locations based on 441k+ incident reports across the GTA. Leverages R-tree spatial indexing for O(log n) bounding-box queries, and OSRM-based routing augmented by spatial buffers and crime-density scoring, placing 3rd @ Ignition Hacks 2025.",
+      tech: ["React.js", "NumPY", "Pandas", "Redis", "Leaflet.js"],
+      github: "https://github.com/jstxw/RouteTO",
+      devpost: "https://devpost.com/software/routeto",
+      live: "https://routeto.vercel.app/",
       image: null,
     },
     {
       id: 3,
-      name: "RouteTO",
-      description:
-        "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
-      tech: ["React Native", "Firebase", "Stripe"],
-      github: "https://github.com/jstxw",
-      devpost: "https://devpost.com/jstxw",
-      live: "https://routeto.app",
-      image: null,
-    },
-    {
-      id: 4,
       name: "VibeTrade",
       description:
         "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
@@ -47,7 +55,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       image: null,
     },
     {
-      id: 5,
+      id: 4,
       name: "TimeDSS",
       description:
         "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
@@ -57,7 +65,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       image: null,
     },
     {
-      id: 6,
+      id: 5,
       name: "PushUP",
       description:
         "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
@@ -67,7 +75,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       image: null,
     },
     {
-      id: 7,
+      id: 6,
       name: "NXPLORE",
       description:
         "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
@@ -99,7 +107,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
                 <div className="placeholder">No Image</div>
               )}
             </div>
-            <div className="project-info">
+            <div className="project-info text-black">
               <h3>{project.name}</h3>
               <p>{project.description}</p>
               <div className="tech-stack">
@@ -151,24 +159,6 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
                     </a>
                   )}
                 </div>
-                <a
-                  href={project.live || project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  VIEW PROJECT
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>

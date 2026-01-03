@@ -7,7 +7,6 @@ import Dock from "./components/Dock";
 import { Draggable } from "gsap/draggable";
 import Terminal from "./windows/terminal";
 import AboutMe from "./windows/AboutMe";
-import Contact from "./windows/Contact";
 import Projects from "./windows/Projects";
 import Photography from "./windows/Photography";
 import BackgroundImage from "./assets/Background.jpg";
@@ -71,7 +70,6 @@ function App() {
 
       <Terminal />
       <AboutMe />
-      <Contact />
       <Projects />
       <Photography />
     </main>

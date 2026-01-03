@@ -84,6 +84,12 @@ const Dock = () => {
     };
   }, []);
   const toggleApp = (app) => {
+    // Handle external links
+    if (app.link) {
+      window.open(app.link, "_blank");
+      return;
+    }
+
     if (!app.canOpen) return;
 
     const win = windows[app.id];
@@ -106,14 +112,14 @@ const Dock = () => {
   return (
     <section id="dock" ref={sectionRef} className="opacity-0">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map(({ id, name, icon, canOpen }) => (
+        {dockApps.map(({ id, name, icon, canOpen, link }) => (
           <div key={id} className="dock-item flex flex-col items-center">
             <button
               type="button"
               className="dock-icon"
               aria-label={name}
-              disabled={!canOpen}
-              onClick={() => toggleApp({ id, canOpen })}
+              disabled={!canOpen && !link}
+              onClick={() => toggleApp({ id, canOpen, link })}
             >
               <img
                 src={`/images/${icon}`}

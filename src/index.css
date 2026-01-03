@@ -165,7 +165,7 @@ body {
   }
 
   #terminal {
-    @apply w-6xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+    @apply w-[80vw] max-w-6xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
 
     h2 {
       @apply font-bold text-xl text-center w-full;
@@ -221,7 +221,7 @@ body {
   }
 
   #aboutme {
-    @apply w-7xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+    @apply w-[85vw] max-w-7xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
     font-family: 'Georama', sans-serif;
 
     h2 {
@@ -260,12 +260,12 @@ body {
       @apply flex flex-col justify-center flex-1 p-12;
 
       h3 {
-        @apply text-4xl text-stone-800 mb-4 tracking-wide font-bold;
+        @apply text-4xl text-black mb-4 tracking-wide font-bold;
         font-family: serif;
       }
 
       p {
-        @apply text-base text-stone-500 leading-relaxed mb-6;
+        @apply text-base text-stone-700 font-georama leading-relaxed mb-6;
       }
 
       .tech-stack {
@@ -274,10 +274,6 @@ body {
         span {
           @apply text-xs font-medium text-stone-500 uppercase tracking-wider px-3 py-1.5 bg-stone-100 rounded-full;
         }
-      }
-
-      .project-footer {
-        @apply flex items-center justify-between;
       }
 
       .project-icons {
@@ -291,60 +287,48 @@ body {
           }
         }
       }
-
-      .project-link {
-        @apply flex items-center gap-3 text-sm font-medium text-stone-600 uppercase tracking-wider px-5 py-3 border border-stone-300 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300;
-
-        svg {
-          @apply transition-transform duration-300;
-        }
-
-        &:hover svg {
-          transform: translate(3px, -3px);
-        }
-      }
     }
   }
 
   #photography-window {
-    @apply w-[85vw] max-w-[1400px] bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+    @apply w-[90vw] max-w-[1600px] bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+  }
 
-    .photography-content {
-      @apply max-h-[80vh] overflow-y-auto p-8;
-    }
+  #photography-window .photography-content {
+    @apply min-h-[85vh] max-h-[85vh] overflow-y-auto pt-4 px-4 pb-8;
+  }
 
-    .photography-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 200px;
-      gap: 16px;
-    }
+  #photography-window .photography-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 16px;
+  }
 
-    .photo-item {
-      @apply overflow-hidden rounded-2xl bg-stone-100;
+  #photography-window .photo-item {
+    @apply overflow-hidden rounded-sm bg-stone-100;
+  }
 
-      &.horizontal {
-        grid-column: span 1;
-        grid-row: span 1;
-      }
+  #photography-window .photo-item.horizontal {
+    /* 6000x4000 = 3:2 ratio - spans 1 row */
+    grid-row: span 1;
+  }
 
-      &.vertical {
-        grid-column: span 1;
-        grid-row: span 2;
-      }
+  #photography-window .photo-item.vertical {
+    /* 4000x6000 = 2:3 ratio - spans 2 rows */
+    grid-row: span 2;
+  }
 
-      img {
-        @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
-      }
-    }
+  #photography-window .photo-item img {
+    @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
+  }
 
-    .empty-state {
-      @apply flex items-center justify-center h-64 text-stone-400 text-lg;
-    }
+  #photography-window .empty-state {
+    @apply flex items-center justify-center h-64 text-stone-400 text-lg;
   }
 
   #contact-window {
-    @apply w-4xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
+    @apply w-[70vw] max-w-4xl bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
 
     h2 {
       @apply font-bold text-lg text-center w-full;

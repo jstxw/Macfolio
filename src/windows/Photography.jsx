@@ -20,7 +20,9 @@ const Photography = ({ closeWindow, minimizeWindow }) => {
             {gallery.map((photo) => (
               <div
                 key={photo.id}
-                className={`photo-item ${photo.orientation === "vertical" ? "vertical" : "horizontal"}`}
+                className={`photo-item.${
+                  photo.orientation === "vertical" ? "vertical" : "horizontal"
+                }`}
               >
                 <img src={photo.img} alt={`Photo ${photo.id}`} />
               </div>
