@@ -234,98 +234,64 @@ body {
   }
 
   #projects-window {
-    @apply w-7xl bg-stone-50 shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
-  }
+    @apply w-[85vw] max-w-[1400px] bg-white shadow-2xl drop-shadow-2xl rounded-2xl overflow-hidden;
 
-  .portfolio-container {
-    @apply px-12 py-10 max-h-[80vh] overflow-y-auto;
-  }
+    .projects-content {
+      @apply max-h-[80vh] overflow-y-auto;
+    }
 
-  .portfolio-header {
-    @apply mb-10;
-  }
+    .project-card {
+      @apply flex border-b border-stone-200 last:border-b-0;
+    }
 
-  .portfolio-header h1 {
-    @apply text-6xl font-black tracking-tight text-stone-900 mb-4;
-    font-family: "Georama", sans-serif;
-  }
+    .project-image {
+      @apply w-[55%] flex-shrink-0 bg-stone-100;
 
-  .header-line {
-    @apply w-full h-px bg-stone-300;
-  }
+      img {
+        @apply w-full h-full object-cover;
+      }
 
-  .projects-grid {
-    @apply flex flex-col gap-8;
-  }
+      .placeholder {
+        @apply w-full h-96 flex items-center justify-center text-stone-400 text-sm bg-gradient-to-br from-stone-100 to-stone-200;
+      }
+    }
 
-  .project-card {
-    @apply flex gap-8 p-6 bg-white rounded-2xl no-underline transition-all duration-300 border border-stone-100;
-  }
+    .project-info {
+      @apply flex flex-col justify-center flex-1 p-12;
 
-  .project-card:hover {
-    @apply shadow-xl border-stone-200;
-    transform: translateY(-4px);
-  }
+      h3 {
+        @apply text-4xl font-light text-stone-800 mb-4 tracking-tight;
+        font-family: "Georama", sans-serif;
+      }
 
-  .project-card:hover .card-image img {
-    transform: scale(1.05);
-  }
+      p {
+        @apply text-base text-stone-500 leading-relaxed mb-6;
+      }
 
-  .project-card:hover .view-project {
-    @apply text-stone-900;
-  }
+      .tech-stack {
+        @apply flex flex-wrap gap-2 mb-8;
 
-  .project-card:hover .view-project svg {
-    transform: translate(4px, -4px);
-  }
+        span {
+          @apply text-xs font-medium text-stone-500 uppercase tracking-wider px-3 py-1.5 bg-stone-100 rounded-full;
+        }
+      }
 
-  .card-image {
-    @apply w-80 h-48 flex-shrink-0 rounded-xl overflow-hidden bg-stone-100;
-  }
+      .project-footer {
+        @apply flex justify-end;
+      }
 
-  .card-image img {
-    @apply w-full h-full object-cover transition-transform duration-500;
-  }
+      .project-link {
+        @apply flex items-center gap-3 text-sm font-medium text-stone-600 uppercase tracking-wider px-5 py-3 border border-stone-300 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300;
 
-  .image-placeholder {
-    @apply w-full h-full flex items-center justify-center bg-gradient-to-br from-stone-100 to-stone-200;
-  }
+        svg {
+          @apply transition-transform duration-300;
+        }
 
-  .image-placeholder span {
-    @apply text-5xl font-light text-stone-300;
-  }
-
-  .card-content {
-    @apply flex flex-col justify-center flex-1 py-2;
-  }
-
-  .project-year {
-    @apply text-sm font-medium text-stone-400 uppercase tracking-widest mb-2;
-  }
-
-  .project-title {
-    @apply text-2xl font-semibold text-stone-900 mb-3;
-    font-family: "Georama", sans-serif;
-  }
-
-  .project-description {
-    @apply text-base text-stone-500 leading-relaxed mb-4;
-  }
-
-  .project-tech {
-    @apply flex flex-wrap items-center gap-2 mb-4;
-  }
-
-  .project-tech span {
-    @apply text-xs font-medium text-stone-400 uppercase tracking-wider px-3 py-1 bg-stone-100 rounded-full;
-  }
-
-  .view-project {
-    @apply flex items-center gap-2 text-sm font-medium text-stone-400 transition-colors duration-300 mt-auto;
-  }
-
-  .view-project svg {
-    @apply transition-transform duration-300;
+        &:hover svg {
+          transform: translate(3px, -3px);
+        }
+      }
+    }
   }
 
   #contact-window {

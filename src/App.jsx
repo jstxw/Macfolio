@@ -6,7 +6,7 @@ import Welcome from "./components/Welcome";
 import Dock from "./components/Dock";
 import BackgroundSelector from "./components/BackgroundSelector";
 import { Draggable } from "gsap/draggable";
-import Terminal from "./windows/Terminal";
+import Terminal from "./windows/terminal";
 import AboutMe from "./windows/AboutMe";
 import Contact from "./windows/Contact";
 import Projects from "./windows/Projects";

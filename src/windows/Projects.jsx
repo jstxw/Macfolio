@@ -7,41 +7,28 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       id: 1,
       name: "Pluma",
       description:
-        "A badminton training app helping players improve through structured drills, shot techniques, and interactive 3D visualizations.",
+        "Helping badminton players improve through structured drills, shot techniques, and interactive 3D training visualizations. Built with a focus on smooth animations and intuitive user experience.",
       tech: ["React Native", "Expo", "Three.js"],
       link: "https://github.com/jstxw/Pluma",
       image: "/images/project-1.png",
-      year: "2024",
     },
     {
       id: 2,
       name: "rainbolt.ai",
       description:
-        "An AI-powered geolocation game that challenges players to identify locations from street view images using machine learning.",
-      tech: ["Next.js", "Python", "TensorFlow"],
+        "A smart tool that helps perfect resumes with instant AI-powered feedback on keywords, formatting, and overall impact. Leverages OpenAI to provide actionable suggestions.",
+      tech: ["Next.js", "Tailwind", "OpenAI"],
       link: "https://github.com/jstxw",
       image: "/images/project-2.png",
-      year: "2024",
     },
     {
       id: 3,
       name: "RouteTO",
       description:
-        "Smart transit companion for Toronto commuters with real-time TTC updates, route optimization, and delay predictions.",
-      tech: ["React Native", "Node.js", "MongoDB"],
+        "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
+      tech: ["React Native", "Firebase", "Stripe"],
       link: "https://github.com/jstxw",
       image: "/images/project-3.png",
-      year: "2023",
-    },
-    {
-      id: 4,
-      name: "VibeTrade",
-      description:
-        "Social trading platform connecting investors to share strategies, track portfolios, and discover market insights together.",
-      tech: ["React", "FastAPI", "PostgreSQL"],
-      link: "https://github.com/jstxw",
-      image: "/images/project-4.png",
-      year: "2023",
     },
   ];
 
@@ -52,50 +39,39 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
           closeWindow={closeWindow}
           minimizeWindow={minimizeWindow}
         />
-        <div className="flex-1" />
+        <h2>Projects</h2>
         <div className="w-14" />
       </div>
 
-      <div className="portfolio-container">
-        {/* Header Section */}
-        <header className="portfolio-header">
-          <h1>PORTFOLIO</h1>
-          <div className="header-line" />
-        </header>
-
-        {/* Projects Grid */}
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <a
-              key={project.id}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card"
-            >
-              <div className="card-image">
-                {project.image ? (
-                  <img src={project.image} alt={project.name} />
-                ) : (
-                  <div className="image-placeholder">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                  </div>
-                )}
+      <div className="projects-content">
+        {projects.map((project) => (
+          <div key={project.id} className="project-card">
+            <div className="project-image">
+              {project.image ? (
+                <img src={project.image} alt={project.name} />
+              ) : (
+                <div className="placeholder">No Image</div>
+              )}
+            </div>
+            <div className="project-info">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+              <div className="tech-stack">
+                {project.tech.map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
               </div>
-              <div className="card-content">
-                <span className="project-year">{project.year}</span>
-                <h2 className="project-title">{project.name}</h2>
-                <p className="project-description">{project.description}</p>
-                <div className="project-tech">
-                  {project.tech.map((tech, i) => (
-                    <span key={i}>{tech}</span>
-                  ))}
-                </div>
-                <div className="view-project">
-                  <span>View Project</span>
+              <div className="project-footer">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  VIEW PROJECT
                   <svg
-                    width="20"
-                    height="20"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -103,11 +79,11 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
                   >
                     <path d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
-                </div>
+                </a>
               </div>
-            </a>
-          ))}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
