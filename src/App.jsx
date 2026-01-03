@@ -4,16 +4,17 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Welcome from "./components/Welcome";
 import Dock from "./components/Dock";
-import BackgroundSelector from "./components/BackgroundSelector";
 import { Draggable } from "gsap/draggable";
 import Terminal from "./windows/terminal";
 import AboutMe from "./windows/AboutMe";
 import Contact from "./windows/Contact";
 import Projects from "./windows/Projects";
+import Photography from "./windows/Photography";
+import BackgroundImage from "./assets/Background.jpg";
 gsap.registerPlugin(Draggable);
 
 function App() {
-  const [background, setBackground] = useState("/images/wallpaper1.jpg");
+  const [background, setBackground] = useState(BackgroundImage);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -21,7 +22,7 @@ function App() {
     background === "/images/wallpaper1.jpg" ||
     background === "/images/wallpaper2.jpg";
   const bgPosition =
-    background === "/images/wallpaper1.jpg" ? "center top" : "center";
+    background === "/images/wallpaper1.jpg" ? "center top" : "center 70%";
 
   useEffect(() => {
     // Small delay to ensure smooth animation start
@@ -62,17 +63,17 @@ function App() {
       {needsOverlay && (
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       )}
+      {/* Slight darkening overlay for all backgrounds */}
+      <div className="absolute inset-0 bg-black/50 pointer-events-none" />
       <Navbar />
       <Welcome />
       <Dock />
-      <BackgroundSelector
-        selected={background}
-        onSelect={handleBackgroundChange}
-      />
+
       <Terminal />
       <AboutMe />
       <Contact />
       <Projects />
+      <Photography />
     </main>
   );
 }

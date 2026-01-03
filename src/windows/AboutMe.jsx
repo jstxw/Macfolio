@@ -5,13 +5,14 @@ import WaterlooLogo from "../assets/Waterloo.png";
 import MelomedLogo from "../assets/Melomed.png";
 import PlumaLogo from "../assets/Pluma_Icon.png";
 import SummerHacksLogo from "../assets/SummerHacks.png";
+import ProfilePicture from "../assets/picture.jpg";
 
 const AboutMe = ({ closeWindow, minimizeWindow }) => {
   // Easy to edit content
   const profile = {
     name: "Justin Tingxuan Wang",
     program: "Engineering @ University of Waterloo",
-    imageUrl: null, // Set to null or empty string to show placeholder
+    imageUrl: ProfilePicture, // Set to null or empty string to show placeholder
   };
 
   const aboutPoints = [
@@ -174,7 +175,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
           <h1 className="mt-12 text-4xl italic font-semibold font-georama text-black text-center">
             {profile.name}
           </h1>
-          <p className="text-2xl mt-8 text-black text-center">
+          <p className="text-2xl mt-8 text-black font-serif text-center">
             {profile.program}
           </p>
 
@@ -252,7 +253,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
                 }`}
               >
                 {point.type === "header" ? (
-                  <span className="text-2xl text-zinc-500font-semibold leading-relaxed">
+                  <span className="text-2xl text-zinc-500font-semibold leading-relaxed font-georama">
                     {point.content}
                   </span>
                 ) : (

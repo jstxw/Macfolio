@@ -172,22 +172,10 @@ const photosLinks = [
 ];
 
 const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
+  // Add your photos here with orientation: "horizontal" or "vertical"
+  // Example:
+  // { id: 1, img: "/images/photo1.jpg", orientation: "horizontal" },
+  // { id: 2, img: "/images/photo2.jpg", orientation: "vertical" },
 ];
 
 export {
