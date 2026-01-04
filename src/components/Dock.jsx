@@ -125,7 +125,7 @@ const Dock = () => {
                 src={`/images/${icon}`}
                 alt={name}
                 loading="lazy"
-                className={canOpen ? "" : "opacity-60"}
+                className={canOpen || link ? "" : "opacity-60"}
               />
             </button>
             <span className="dock-label text-white text-xs font-georama">

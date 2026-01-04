@@ -9,9 +9,11 @@ const Navbar = () => {
         <img src="/images/logo.svg" alt="logo" />
         <p className="font-bold">Justin's Portfolio</p>
         <ul>
-          {navLinks.map(({ id, name }) => (
+          {navLinks.map(({ id, name, link }) => (
             <li key={id}>
-              <p>{name}</p>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                {name}
+              </a>
             </li>
           ))}
         </ul>

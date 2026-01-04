@@ -6,17 +6,17 @@ const navLinks = [
   {
     id: 1,
     name: "Github",
-    type: "Github",
+    link: "https://github.com/jstxw",
+  },
+  {
+    id: 2,
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/justin-tingxuan-wang-677899268/",
   },
   {
     id: 3,
-    name: "Linkedin",
-    type: "Linkedin",
-  },
-  {
-    id: 4,
     name: "Twitter",
-    type: "Twitter",
+    link: null,
   },
 ];
 
@@ -69,7 +69,7 @@ const dockApps = [
     name: "Contact",
     icon: "contact.png",
     canOpen: false,
-    link: "mailto:j355wang@uwaterloo.ca",
+    link: "mailto:j2998wang@uwaterloo.ca",
   },
 
 

@@ -1,18 +1,55 @@
+import { useRef, useEffect } from "react";
 import WindowWrapper from "../hoc/WindowWrapper";
 import WindowControls from "../components/WindowControls";
+import TimeDSS from "../assets/Project_Pictures/TImeDSS.png";
+
+// Video player component with localStorage persistence
+const ProjectVideo = ({ src, projectId }) => {
+  const videoRef = useRef(null);
+  const storageKey = `project-video-${projectId}`;
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Restore saved position
+    const savedTime = localStorage.getItem(storageKey);
+    if (savedTime) {
+      video.currentTime = parseFloat(savedTime);
+    }
+
+    // Save position periodically and on pause
+    const saveTime = () => {
+      localStorage.setItem(storageKey, video.currentTime.toString());
+    };
+
+    const interval = setInterval(saveTime, 1000);
+    video.addEventListener("pause", saveTime);
+    video.addEventListener("ended", () => {
+      localStorage.setItem(storageKey, "0");
+    });
+
+    return () => {
+      clearInterval(interval);
+      video.removeEventListener("pause", saveTime);
+    };
+  }, [storageKey]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      muted
+      loop
+      autoPlay
+      playsInline
+      className="w-full h-full object-cover"
+    />
+  );
+};
 
 const Projects = ({ closeWindow, minimizeWindow }) => {
   const projects = [
-    /*{
-      id: 1,
-      name: "Pluma",
-      description:
-        "Helping badminton players improve through structured drills, shot techniques, and interactive 3D training visualizations. Built with a focus on smooth animations and intuitive user experience.",
-      tech: ["React Native", "Expo", "Three.js"],
-      github: "https://github.com/jstxw/Pluma",
-      live: "https://pluma.app",
-      image: null,
-    },*/
     {
       id: 1,
       name: "rainbolt.ai",
@@ -30,7 +67,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       github: "https://github.com/jstxw/rainbolt.ai",
       devpost: "https://devpost.com/software/rainbolt-ai",
       live: "https://rainboltai.vercel.app/",
-      image: null,
+      video: "/videos/rainboltai.mp4",
     },
     {
       id: 2,
@@ -41,48 +78,27 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       github: "https://github.com/jstxw/RouteTO",
       devpost: "https://devpost.com/software/routeto",
       live: "https://routeto.vercel.app/",
-      image: null,
+      video: "/videos/RouteTO.mp4",
     },
     {
       id: 3,
       name: "VibeTrade",
       description:
-        "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
-      tech: ["React Native", "Firebase", "Stripe"],
-      github: "https://github.com/jstxw",
-      devpost: "https://devpost.com/jstxw",
-      live: "https://routeto.app",
-      image: null,
+        "Realistic paper trading platform with risk management analysis leveraging Alpaca, Finnhub and Polymarket/Reddit. Real-time dealer agent to prevent impulsive trading; featuring anomaly detection, emergency account lockouts, and a weighted risk scoring system.",
+      tech: ["Websockets", "PostgreSQL", "ElevenLabs", "LangGraph", "OpenAI"],
+      github: "https://github.com/jstxw/VibeTrade",
+      devpost: "https://devpost.com/software/vibetrade",
+      video: "/videos/VibeTrade.mp4",
     },
     {
       id: 4,
       name: "TimeDSS",
       description:
-        "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
-      tech: ["React Native", "Firebase", "Stripe"],
-      github: "https://github.com/jstxw",
-      live: "https://routeto.app",
-      image: null,
-    },
-    {
-      id: 5,
-      name: "PushUP",
-      description:
-        "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
-      tech: ["React Native", "Firebase", "Stripe"],
-      github: "https://github.com/jstxw",
-      live: "https://routeto.app",
-      image: null,
-    },
-    {
-      id: 6,
-      name: "NXPLORE",
-      description:
-        "A fast and convenient mobile app to order meals from favorite restaurants with real-time tracking. Features seamless payment integration and live order updates.",
-      tech: ["React Native", "Firebase", "Stripe"],
-      github: "https://github.com/jstxw",
-      live: "https://routeto.app",
-      image: null,
+        "Excel-based Decision Support System (DSS) to help users plan, track, and optimize how they allocate time across work, study, and personal tasks through VBA. Tools used: XLOOKUP, INDEX-MATCH, SUMIFS, COUNTIFS, IFERROR, OFFSET, dynamic arrays, and pivot tables.",
+      tech: ["VBA", "Excel"],
+      github: "https://github.com/jstxw/TimeDSS",
+      live: "https://jstxw.github.io/TimeDSS/",
+      image: TimeDSS,
     },
   ];
 
@@ -101,8 +117,21 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
         {projects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-image">
-              {project.image ? (
-                <img src={project.image} alt={project.name} />
+              {project.video ? (
+                <ProjectVideo src={project.video} projectId={project.id} />
+              ) : project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  style={
+                    project.id === 4
+                      ? {
+                          objectPosition: "center",
+                          objectFit: "cover",
+                        }
+                      : {}
+                  }
+                />
               ) : (
                 <div className="placeholder">No Image</div>
               )}
