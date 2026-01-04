@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Welcome from "./components/Welcome";
 import Dock from "./components/Dock";
-import { Draggable } from "gsap/draggable";
+import { Draggable } from "gsap/all";
 import Terminal from "./windows/Terminal";
 import AboutMe from "./windows/AboutMe";
 import Projects from "./windows/Projects";

@@ -2,7 +2,7 @@
 //wraps the original component with props, logic, and behavior
 import gsap from "gsap";
 import { useRef, useEffect, useLayoutEffect } from "react";
-import { Draggable } from "gsap/draggable";
+import { Draggable } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import useWindowStore from "../store/Store";
 
