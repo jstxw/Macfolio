@@ -1,5 +1,6 @@
 import WindowWrapper from "../hoc/WindowWrapper";
 import WindowControls from "../components/WindowControls";
+import useWindowStore from "../store/Store";
 import LogicsLogo from "../assets/Logics.png";
 import WaterlooLogo from "../assets/Waterloo.png";
 import MelomedLogo from "../assets/Melomed.png";
@@ -8,6 +9,8 @@ import SummerHacksLogo from "../assets/SummerHacks.png";
 import ProfilePicture from "../assets/picture.jpg";
 
 const AboutMe = ({ closeWindow, minimizeWindow }) => {
+  const openWindow = useWindowStore((state) => state.openWindow);
+
   // Easy to edit content
   const profile = {
     name: "Justin Tingxuan Wang",
@@ -141,7 +144,14 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
       type: "indented",
       content: (
         <>
-          Check out my other <span className="italic">PROJECTS</span>
+          Check out my other{" "}
+          <span
+            onClick={() => openWindow("Projects")}
+            className="relative inline-block group no-underline italic cursor-pointer"
+          >
+            PROJECTS
+            <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+          </span>
         </>
       ),
     },

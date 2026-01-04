@@ -63,6 +63,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
         "Firebase",
         "Auth0",
         "Pinecone",
+        "GCP",
       ],
       github: "https://github.com/jstxw/rainbolt.ai",
       devpost: "https://devpost.com/software/rainbolt-ai",
@@ -73,7 +74,7 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
       id: 2,
       name: "RouteTO",
       description:
-        "RouteTO is a geospatial crime-avoidance routing platform that automatically finds the safest and crime-minimal route between two locations based on 441k+ incident reports across the GTA. Leverages R-tree spatial indexing for O(log n) bounding-box queries, and OSRM-based routing augmented by spatial buffers and crime-density scoring, placing 3rd @ Ignition Hacks 2025.",
+        "RouteTO is a geospatial crime-avoidance routing platform that automatically finds the safest and crime-minimal route between two locations based on 441k+ incident reports across the GTA. Leverages R-tree spatial indexing for O(log n) bounding-box queries, and OSRM-based routing augmented by spatial buffers and crime-density scoring; 3rd @ Ignition Hacks 2025.",
       tech: ["React.js", "NumPY", "Pandas", "Redis", "Leaflet.js"],
       github: "https://github.com/jstxw/RouteTO",
       devpost: "https://devpost.com/software/routeto",
@@ -92,6 +93,15 @@ const Projects = ({ closeWindow, minimizeWindow }) => {
     },
     {
       id: 4,
+      name: "NXPLORE",
+      description:
+        "NXPLORE was developed as a core marketing piece for the 2025 NXNE (North by North East) (250+ artists across 20+ venues) music festival under the category IMCE (Integrated Marketing Campaign Event). Placed 2nd provincially, International Career Development Conference Qualifier.",
+      tech: ["Flutter", "Dart", "YoloV8", "Roboflow"],
+      github: "https://github.com/jstxw/NXPLORE-DECA-ICDC-25",
+      video: "/videos/NXPLORE.mp4",
+    },
+    {
+      id: 5,
       name: "TimeDSS",
       description:
         "Excel-based Decision Support System (DSS) to help users plan, track, and optimize how they allocate time across work, study, and personal tasks through VBA. Tools used: XLOOKUP, INDEX-MATCH, SUMIFS, COUNTIFS, IFERROR, OFFSET, dynamic arrays, and pivot tables.",

@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 const FONT_WEIGHTS = {
   subtitle: { min: 100, max: 400, default: 100 },
   title: { min: 400, max: 900, default: 400 },
+  tagline: { min: 100, max: 400, default: 100 },
 };
 
 const renderText = (text, className, baseWeight = 400) => {
@@ -119,6 +120,60 @@ const DrawnPortfolio = ({ onAnimationComplete }) => {
   );
 };
 
+const TaglineWords = ({ show }) => {
+  const words = ["Software.", "Data.", "Technology."];
+  const containerRef = useRef(null);
+  const wordRefs = useRef([]);
+  const [animationComplete, setAnimationComplete] = useState(false);
+
+  useEffect(() => {
+    if (show && wordRefs.current.length) {
+      gsap.set(wordRefs.current, { opacity: 0, y: 20 });
+
+      const totalWords = wordRefs.current.length;
+      wordRefs.current.forEach((word, i) => {
+        gsap.to(word, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          delay: i * 0.5,
+          ease: "power2.out",
+          onComplete: i === totalWords - 1 ? () => setAnimationComplete(true) : undefined,
+        });
+      });
+    }
+  }, [show]);
+
+  useEffect(() => {
+    if (animationComplete && containerRef.current) {
+      const cleanup = setupTextHover(containerRef.current, "tagline");
+      return () => cleanup();
+    }
+  }, [animationComplete]);
+
+  return (
+    <div ref={containerRef} className="flex gap-3 mt-8">
+      {words.map((word, i) => (
+        <span
+          key={i}
+          ref={(el) => (wordRefs.current[i] = el)}
+          className="opacity-0"
+        >
+          {[...word].map((char, j) => (
+            <span
+              key={j}
+              className="text-3xl italic font-georama text-gray-200"
+              style={{ fontVariationSettings: "'wght' 100" }}
+            >
+              {char}
+            </span>
+          ))}
+        </span>
+      ))}
+    </div>
+  );
+};
+
 const Welcome = () => {
   const subtitleRef = useRef(null);
   const titleRef = useRef(null);
@@ -142,7 +197,7 @@ const Welcome = () => {
     <section id="welcome">
       <p ref={subtitleRef}>
         {renderText(
-          "Hey, I'm Justin! Welcome to my software",
+          "Hey, I'm Justin! Welcome to my",
           "text-5xl italic font-georama",
           100
         )}
@@ -158,6 +213,7 @@ const Welcome = () => {
           )}
         </h1>
       )}
+      <TaglineWords show={animationDone} />
       <div className="small-screen">
         <p>This portfolio is designed for desktop/tablet screens only.</p>
       </div>

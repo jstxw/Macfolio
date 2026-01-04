@@ -245,7 +245,7 @@ body {
     }
 
     .project-image {
-      @apply w-[55%] flex-shrink-0 bg-stone-100;
+      @apply w-[55%] flex-shrink-0 bg-stone-100 aspect-video;
 
       img {
         @apply w-full h-full object-cover;

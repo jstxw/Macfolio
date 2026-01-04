@@ -29,6 +29,28 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // GA4 Tracking
+    const script1 = document.createElement("script");
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+    script1.async = true;
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement("script");
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    `;
+    document.head.appendChild(script2);
+
+    return () => {
+      document.head.removeChild(script1);
+      document.head.removeChild(script2);
+    };
+  }, []);
+
   const handleBackgroundChange = (newBg) => {
     if (newBg === background) return;
     setIsTransitioning(true);
@@ -72,6 +94,12 @@ function App() {
       <AboutMe />
       <Projects />
       <Photography />
+
+      {/* Photo credit watermark */}
+      <div className="absolute bottom-5 right-4 text-right font-georama text-white text-sm drop-shadow-lg pointer-events-none select-none">
+        <p>Image shot on Canon R50, RF 24-105mm STM</p>
+        <p>Justin Wang © 2026</p>
+      </div>
     </main>
   );
 }
