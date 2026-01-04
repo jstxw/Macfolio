@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Welcome from "./components/Welcome";
@@ -100,6 +101,8 @@ function App() {
         <p>Image shot on Canon R50, RF 24-105mm STM</p>
         <p>Justin Wang © 2026</p>
       </div>
+
+      <Analytics />
     </main>
   );
 }
