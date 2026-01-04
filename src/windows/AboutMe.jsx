@@ -168,29 +168,33 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
         <div className="w-14" />
       </div>
 
-      <div className="flex flex-row items-start gap-24 w-full mx-auto py-32 bg-white px-20">
+      <div className="flex flex-row items-start gap-12 w-full mx-auto py-10 bg-white px-12">
         {/* Left Column: Profile Image */}
-        <div className="w-96 flex-shrink-0 flex flex-col items-center">
+        <div className="w-72 flex-shrink-0 flex flex-col items-center">
           {profile.imageUrl ? (
             <img
               src={profile.imageUrl}
               alt={`Profile photo of ${profile.name}`}
-              className="w-80 h-80 object-cover rounded-full"
+              className="object-cover rounded-full"
+              style={{ width: '224px', height: '224px' }}
             />
           ) : (
-            <div className="w-80 h-80 bg-gray-200 rounded-full flex items-center justify-center text-gray-400 text-xl">
+            <div
+              className="bg-gray-200 rounded-full flex items-center justify-center text-gray-400 text-xl"
+              style={{ width: '224px', height: '224px' }}
+            >
               Upload image
             </div>
           )}
-          <h1 className="mt-12 text-4xl italic font-semibold font-georama text-black text-center">
+          <h1 className="mt-6 text-2xl italic font-semibold font-georama text-black text-center">
             {profile.name}
           </h1>
-          <p className="text-2xl mt-8 text-black font-serif text-center">
+          <p className="text-lg mt-2 text-black font-serif text-center">
             {profile.program}
           </p>
 
           {/* Social Icons */}
-          <div className="flex items-center justify-center gap-6 mt-8">
+          <div className="flex items-center justify-center gap-4 mt-4">
             <a
               href="https://github.com/jstxw"
               target="_blank"
@@ -198,7 +202,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
               className="text-black hover:text-zinc-300 transition-colors"
             >
               <svg
-                className="w-12 h-12"
+                className="w-8 h-8"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -217,7 +221,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
               className="text-black hover:text-zinc-300 transition-colors"
             >
               <svg
-                className="w-12 h-12"
+                className="w-8 h-8"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -230,7 +234,7 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
               className="text-black hover:text-zinc-300 transition-colors"
             >
               <svg
-                className="w-12 h-12"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -247,29 +251,29 @@ const AboutMe = ({ closeWindow, minimizeWindow }) => {
         </div>
 
         {/* Right Column: Text Content */}
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col gap-4">
           <div>
-            <h1 className="relative inline-block group text-5xl font-serif font-bold text-black mb-4">
+            <h1 className="relative inline-block group text-3xl font-serif font-bold text-black mb-2">
               about me.
               <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </h1>
           </div>
-          <ul className="space-y-2">
+          <ul className="space-y-1.5">
             {aboutPoints.map((point, index) => (
               <li
                 key={index}
-                className={`flex items-start gap-4 ${
-                  point.type === "indented" ? "ml-8" : ""
+                className={`flex items-start gap-3 ${
+                  point.type === "indented" ? "ml-6" : ""
                 }`}
               >
                 {point.type === "header" ? (
-                  <span className="text-2xl text-zinc-500font-semibold leading-relaxed font-georama">
+                  <span className="text-lg text-zinc-500 font-semibold leading-relaxed font-georama">
                     {point.content}
                   </span>
                 ) : (
                   <>
-                    <span className="text-2xl text-black mt-1">➤</span>
-                    <span className="text-2xl text-black leading-relaxed">
+                    <span className="text-base text-black mt-0.5">➤</span>
+                    <span className="text-base text-black leading-relaxed">
                       {point.content}
                     </span>
                   </>
