@@ -50,7 +50,7 @@ body {
     }
 
     ul {
-      @apply flex items-center gap-5 max-sm:hidden;1
+      @apply flex items-center gap-5 max-sm:hidden;
 
       p {
         @apply text-sm cursor-pointer hover:underline transition-all;
