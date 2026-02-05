@@ -43,6 +43,7 @@ const ProjectVideo = ({ src, projectId }) => {
       loop
       autoPlay
       playsInline
+      preload="metadata"
       className="w-full h-full object-cover"
     />
   );

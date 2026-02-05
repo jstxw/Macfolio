@@ -9,7 +9,8 @@ import Terminal from "./windows/Terminal";
 import AboutMe from "./windows/AboutMe";
 import Projects from "./windows/Projects";
 import Photography from "./windows/Photography";
-import BackgroundImage from "./assets/Background.jpg";
+import BackgroundImage from "./assets/Background.webp";
+import { Analytics } from "@vercel/analytics/react";
 gsap.registerPlugin(Draggable);
 
 function App() {
@@ -100,6 +101,7 @@ function App() {
         <p>Image shot on Canon R50, RF 24-105mm STM</p>
         <p>Justin Wang © 2026</p>
       </div>
+      <Analytics />
     </main>
   );
 }

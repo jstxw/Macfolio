@@ -18,14 +18,14 @@ const PhotoViewer = ({ photo, onClose }) => {
       <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden max-w-[90vw] max-h-[90vh]">
         <div id="window-header">
           <WindowControls closeWindow={onClose} />
-          <h2>Photo {photo.id}</h2>
+          <h2>{photo.title}</h2>
           <div className="w-14" />
         </div>
 
         <div className="bg-stone-100 p-4">
           <img
             src={photo.img}
-            alt={`Photo ${photo.id}`}
+            alt={photo.title}
             className="max-w-[85vw] max-h-[80vh] object-contain"
           />
         </div>
@@ -36,6 +36,12 @@ const PhotoViewer = ({ photo, onClose }) => {
 
 const Photography = ({ closeWindow, minimizeWindow }) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  // Split gallery into 3 columns for staggered layout
+  const columns = [[], [], []];
+  gallery.forEach((photo, i) => {
+    columns[i % 3].push(photo);
+  });
 
   return (
     <div id="photography-window">
@@ -51,19 +57,25 @@ const Photography = ({ closeWindow, minimizeWindow }) => {
       <div className="photography-content">
         {gallery.length > 0 ? (
           <div className="photography-grid">
-            {gallery.map((photo) => (
+            {columns.map((col, colIndex) => (
               <div
-                key={photo.id}
-                className={`photo-item ${
-                  photo.orientation === "vertical" ? "vertical" : "horizontal"
-                }`}
-                onClick={() => setSelectedPhoto(photo)}
+                key={colIndex}
+                className={`photo-column ${colIndex === 1 ? "offset" : ""}`}
               >
-                <img
-                  src={photo.img}
-                  alt={`Photo ${photo.id}`}
-                  className="cursor-pointer"
-                />
+                {col.map((photo) => (
+                  <div
+                    key={photo.id}
+                    className="photo-item"
+                    onClick={() => setSelectedPhoto(photo)}
+                  >
+                    <img
+                      src={photo.img}
+                      alt={photo.title}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </div>

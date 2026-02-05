@@ -50,7 +50,7 @@ body {
     }
 
     ul {
-      @apply flex items-center gap-5 max-sm:hidden;
+      @apply flex items-center gap-5 max-sm:hidden;1
 
       p {
         @apply text-sm cursor-pointer hover:underline transition-all;
@@ -117,7 +117,7 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-5 py-4 rounded-t-xl bg-gray-50 border-b border-gray-200 select-none text-base text-gray-400;
+    @apply flex items-center justify-between px-5 py-4 rounded-t-xl bg-gray-50 border-b border-gray-200 select-none text-base text-gray-400 relative z-10;
   }
 
   #safari {
@@ -295,32 +295,27 @@ body {
   }
 
   #photography-window .photography-content {
-    @apply min-h-[85vh] max-h-[85vh] overflow-y-auto pt-4 px-4 pb-8;
+    @apply min-h-[85vh] max-h-[85vh] overflow-y-auto px-10 pt-6 pb-12;
   }
 
   #photography-window .photography-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 180px;
-    gap: 16px;
+    @apply flex gap-6;
+  }
+
+  #photography-window .photo-column {
+    @apply flex-1 flex flex-col gap-6;
+  }
+
+  #photography-window .photo-column.offset {
+    @apply mt-20;
   }
 
   #photography-window .photo-item {
-    @apply overflow-hidden rounded-sm bg-stone-100;
-  }
-
-  #photography-window .photo-item.horizontal {
-    /* 6000x4000 = 3:2 ratio - spans 1 row */
-    grid-row: span 1;
-  }
-
-  #photography-window .photo-item.vertical {
-    /* 4000x6000 = 2:3 ratio - spans 2 rows */
-    grid-row: span 2;
+    @apply cursor-pointer;
   }
 
   #photography-window .photo-item img {
-    @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
+    @apply w-full rounded-2xl object-cover transition-transform duration-500 hover:scale-[1.02];
   }
 
   #photography-window .empty-state {

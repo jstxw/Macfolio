@@ -1,30 +1,30 @@
 //where to change data for projects, files, and different lists
-import IMG_0554 from "../assets/Photography_Pictures/IMG_0554.jpg";
-import IMG_0714 from "../assets/Photography_Pictures/IMG_0714.jpg";
-import IMG_0961 from "../assets/Photography_Pictures/IMG_0961.jpg";
-import IMG_1103 from "../assets/Photography_Pictures/IMG_1103.jpg";
-import IMG_1272 from "../assets/Photography_Pictures/IMG_1272.JPEG";
-import IMG_1309 from "../assets/Photography_Pictures/IMG_1309.jpg";
-import IMG_1428 from "../assets/Photography_Pictures/IMG_1428.jpg";
-import IMG_1431 from "../assets/Photography_Pictures/IMG_1431.jpg";
-import IMG_1434 from "../assets/Photography_Pictures/IMG_1434.jpg";
-import IMG_1504 from "../assets/Photography_Pictures/IMG_1504.jpg";
-import IMG_1660 from "../assets/Photography_Pictures/IMG_1660.jpg";
-import IMG_1661 from "../assets/Photography_Pictures/IMG_1661.JPEG";
-import IMG_2135 from "../assets/Photography_Pictures/IMG_2135.jpg";
-import IMG_2258 from "../assets/Photography_Pictures/IMG_2258.jpg";
-import IMG_2450 from "../assets/Photography_Pictures/IMG_2450.JPG";
-import IMG_2673 from "../assets/Photography_Pictures/IMG_2673.JPEG";
-import IMG_2715 from "../assets/Photography_Pictures/IMG_2715.jpg";
-import IMG_2776 from "../assets/Photography_Pictures/IMG_2776.JPEG";
-import IMG_3232 from "../assets/Photography_Pictures/IMG_3232.JPG";
-import IMG_6008 from "../assets/Photography_Pictures/IMG_6008.jpg";
-import IMG_6071 from "../assets/Photography_Pictures/IMG_6071.jpg";
-import IMG_6072 from "../assets/Photography_Pictures/IMG_6072.jpg";
-import IMG_6750 from "../assets/Photography_Pictures/IMG_6750.jpg";
-import IMG_6831 from "../assets/Photography_Pictures/IMG_6831.JPEG";
-import IMG_7929 from "../assets/Photography_Pictures/IMG_7929.jpg";
-import IMG_8745 from "../assets/Photography_Pictures/IMG_8745.JPG";
+import IMG_0554 from "../assets/Photography_Pictures/optimized/IMG_0554.webp";
+import IMG_0714 from "../assets/Photography_Pictures/optimized/IMG_0714.webp";
+import IMG_0961 from "../assets/Photography_Pictures/optimized/IMG_0961.webp";
+import IMG_1103 from "../assets/Photography_Pictures/optimized/IMG_1103.webp";
+import IMG_1272 from "../assets/Photography_Pictures/optimized/IMG_1272.webp";
+import IMG_1309 from "../assets/Photography_Pictures/optimized/IMG_1309.webp";
+import IMG_1428 from "../assets/Photography_Pictures/optimized/IMG_1428.webp";
+import IMG_1431 from "../assets/Photography_Pictures/optimized/IMG_1431.webp";
+import IMG_1434 from "../assets/Photography_Pictures/optimized/IMG_1434.webp";
+import IMG_1504 from "../assets/Photography_Pictures/optimized/IMG_1504.webp";
+import IMG_1660 from "../assets/Photography_Pictures/optimized/IMG_1660.webp";
+import IMG_1661 from "../assets/Photography_Pictures/optimized/IMG_1661.webp";
+import IMG_2135 from "../assets/Photography_Pictures/optimized/IMG_2135.webp";
+import IMG_2258 from "../assets/Photography_Pictures/optimized/IMG_2258.webp";
+import IMG_2450 from "../assets/Photography_Pictures/optimized/IMG_2450.webp";
+import IMG_2673 from "../assets/Photography_Pictures/optimized/IMG_2673.webp";
+import IMG_2715 from "../assets/Photography_Pictures/optimized/IMG_2715.webp";
+import IMG_2776 from "../assets/Photography_Pictures/optimized/IMG_2776.webp";
+import IMG_3232 from "../assets/Photography_Pictures/optimized/IMG_3232.webp";
+import IMG_6008 from "../assets/Photography_Pictures/optimized/IMG_6008.webp";
+import IMG_6071 from "../assets/Photography_Pictures/optimized/IMG_6071.webp";
+import IMG_6072 from "../assets/Photography_Pictures/optimized/IMG_6072.webp";
+import IMG_6750 from "../assets/Photography_Pictures/optimized/IMG_6750.webp";
+import IMG_6831 from "../assets/Photography_Pictures/optimized/IMG_6831.webp";
+import IMG_7929 from "../assets/Photography_Pictures/optimized/IMG_7929.webp";
+import IMG_8745 from "../assets/Photography_Pictures/optimized/IMG_8745.webp";
 
 const navLinks = [
   {
@@ -199,32 +199,32 @@ const photosLinks = [
 ];
 
 const gallery = [
-  { id: 1, img: IMG_0554, orientation: "vertical" },
-  { id: 2, img: IMG_0714, orientation: "horizontal" },
-  { id: 3, img: IMG_0961, orientation: "vertical" },
-  { id: 4, img: IMG_1103, orientation: "horizontal" },
-  { id: 5, img: IMG_1272, orientation: "vertical" },
-  { id: 6, img: IMG_1309, orientation: "horizontal" },
-  { id: 7, img: IMG_1428, orientation: "vertical" },
-  { id: 8, img: IMG_1431, orientation: "horizontal" },
-  { id: 9, img: IMG_1434, orientation: "vertical" },
-  { id: 10, img: IMG_1504, orientation: "horizontal" },
-  { id: 11, img: IMG_1660, orientation: "vertical" },
-  { id: 12, img: IMG_1661, orientation: "horizontal" },
-  { id: 13, img: IMG_2135, orientation: "vertical" },
-  { id: 14, img: IMG_2258, orientation: "horizontal" },
-  { id: 15, img: IMG_2450, orientation: "vertical" },
-  { id: 16, img: IMG_2673, orientation: "horizontal" },
-  { id: 17, img: IMG_2715, orientation: "vertical" },
-  { id: 18, img: IMG_2776, orientation: "horizontal" },
-  { id: 19, img: IMG_3232, orientation: "vertical" },
-  { id: 20, img: IMG_6008, orientation: "horizontal" },
-  { id: 21, img: IMG_6071, orientation: "vertical" },
-  { id: 22, img: IMG_6072, orientation: "horizontal" },
-  { id: 23, img: IMG_6750, orientation: "vertical" },
-  { id: 24, img: IMG_6831, orientation: "horizontal" },
-  { id: 25, img: IMG_7929, orientation: "vertical" },
-  { id: 26, img: IMG_8745, orientation: "horizontal" }
+  { id: 1, img: IMG_0554, orientation: "vertical", title: "Stillness" },
+  { id: 2, img: IMG_0714, orientation: "horizontal", title: "Golden Hour" },
+  { id: 3, img: IMG_0961, orientation: "vertical", title: "Perspective" },
+  { id: 4, img: IMG_1103, orientation: "horizontal", title: "Wanderlust" },
+  { id: 5, img: IMG_1272, orientation: "vertical", title: "Solitude" },
+  { id: 6, img: IMG_1309, orientation: "horizontal", title: "In Motion" },
+  { id: 7, img: IMG_1428, orientation: "vertical", title: "Silhouette" },
+  { id: 8, img: IMG_1431, orientation: "horizontal", title: "Drift" },
+  { id: 9, img: IMG_1434, orientation: "vertical", title: "Reflection" },
+  { id: 10, img: IMG_1504, orientation: "horizontal", title: "Open Road" },
+  { id: 11, img: IMG_1660, orientation: "vertical", title: "Daybreak" },
+  { id: 12, img: IMG_1661, orientation: "horizontal", title: "After Rain" },
+  { id: 13, img: IMG_2135, orientation: "vertical", title: "Focus" },
+  { id: 14, img: IMG_2258, orientation: "horizontal", title: "Passing By" },
+  { id: 15, img: IMG_2450, orientation: "vertical", title: "Contrast" },
+  { id: 16, img: IMG_2673, orientation: "horizontal", title: "Fleeting" },
+  { id: 17, img: IMG_2715, orientation: "vertical", title: "Quiet" },
+  { id: 18, img: IMG_2776, orientation: "horizontal", title: "Somewhere" },
+  { id: 19, img: IMG_3232, orientation: "vertical", title: "Untitled" },
+  { id: 20, img: IMG_6008, orientation: "horizontal", title: "Dusk" },
+  { id: 21, img: IMG_6071, orientation: "vertical", title: "Bloom" },
+  { id: 22, img: IMG_6072, orientation: "horizontal", title: "Remnants" },
+  { id: 23, img: IMG_6750, orientation: "vertical", title: "Reverie" },
+  { id: 24, img: IMG_6831, orientation: "horizontal", title: "Horizon" },
+  { id: 25, img: IMG_7929, orientation: "vertical", title: "Found" },
+  { id: 26, img: IMG_8745, orientation: "horizontal", title: "Elsewhere" }
 ]
 
 export {
