@@ -1,0 +1,2337 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "window_system_pattern",
+        "label": "Window System (HOC + Store + Controls)",
+        "nodes": [
+          "window_wrapper_hoc",
+          "store_use_window_store",
+          "window_controls_component",
+          "constants_window_config"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/hoc/WindowWrapper.jsx"
+      },
+      {
+        "id": "dock_launch_flow",
+        "label": "Dock Launch Flow",
+        "nodes": [
+          "dock_component",
+          "constants_dock_apps",
+          "store_use_window_store",
+          "window_wrapper_hoc"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/components/Dock.jsx"
+      },
+      {
+        "id": "gsap_hover_intensity_motif",
+        "label": "GSAP Mouse-Distance Intensity Motif",
+        "nodes": [
+          "dock_component",
+          "welcome_component",
+          "dock_magnification_pattern",
+          "variable_font_hover_pattern"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "src/components/Dock.jsx"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": "L1",
+      "id": "vite_config_js",
+      "community": 7,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "id": "eslint_config_js",
+      "community": 8,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "src/main.jsx",
+      "source_location": "L1",
+      "id": "src_main_jsx",
+      "community": 0,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L1",
+      "id": "src_app_jsx",
+      "community": 0,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L16",
+      "id": "src_app_app",
+      "community": 0,
+      "norm_label": "app()"
+    },
+    {
+      "label": "WindowWrapper.jsx",
+      "file_type": "code",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": "L1",
+      "id": "src_hoc_windowwrapper_jsx",
+      "community": 0,
+      "norm_label": "windowwrapper.jsx"
+    },
+    {
+      "label": "WindowWrapper()",
+      "file_type": "code",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": "L11",
+      "id": "hoc_windowwrapper_windowwrapper",
+      "community": 0,
+      "norm_label": "windowwrapper()"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L1",
+      "id": "src_constants_index_js",
+      "community": 1,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "navLinks",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L29",
+      "id": "constants_index_navlinks",
+      "community": 1,
+      "norm_label": "navlinks"
+    },
+    {
+      "label": "navIcons",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L47",
+      "id": "constants_index_navicons",
+      "community": 1,
+      "norm_label": "navicons"
+    },
+    {
+      "label": "dockApps",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L66",
+      "id": "constants_index_dockapps",
+      "community": 1,
+      "norm_label": "dockapps"
+    },
+    {
+      "label": "blogPosts",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L102",
+      "id": "constants_index_blogposts",
+      "community": 1,
+      "norm_label": "blogposts"
+    },
+    {
+      "label": "techStack",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L127",
+      "id": "constants_index_techstack",
+      "community": 0,
+      "norm_label": "techstack"
+    },
+    {
+      "label": "socials",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L142",
+      "id": "constants_index_socials",
+      "community": 1,
+      "norm_label": "socials"
+    },
+    {
+      "label": "photosLinks",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L173",
+      "id": "constants_index_photoslinks",
+      "community": 1,
+      "norm_label": "photoslinks"
+    },
+    {
+      "label": "gallery",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L201",
+      "id": "constants_index_gallery",
+      "community": 0,
+      "norm_label": "gallery"
+    },
+    {
+      "label": "WORK_LOCATION",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L241",
+      "id": "constants_index_work_location",
+      "community": 1,
+      "norm_label": "work_location"
+    },
+    {
+      "label": "ABOUT_LOCATION",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L409",
+      "id": "constants_index_about_location",
+      "community": 1,
+      "norm_label": "about_location"
+    },
+    {
+      "label": "RESUME_LOCATION",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L462",
+      "id": "constants_index_resume_location",
+      "community": 1,
+      "norm_label": "resume_location"
+    },
+    {
+      "label": "TRASH_LOCATION",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L481",
+      "id": "constants_index_trash_location",
+      "community": 1,
+      "norm_label": "trash_location"
+    },
+    {
+      "label": "locations",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L509",
+      "id": "constants_index_locations",
+      "community": 1,
+      "norm_label": "locations"
+    },
+    {
+      "label": "WINDOW_CONFIG",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": "L518",
+      "id": "constants_index_window_config",
+      "community": 1,
+      "norm_label": "window_config"
+    },
+    {
+      "label": "Welcome.jsx",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L1",
+      "id": "src_components_welcome_jsx",
+      "community": 5,
+      "norm_label": "welcome.jsx"
+    },
+    {
+      "label": "FONT_WEIGHTS",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L6",
+      "id": "components_welcome_font_weights",
+      "community": 5,
+      "norm_label": "font_weights"
+    },
+    {
+      "label": "renderText()",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L12",
+      "id": "components_welcome_rendertext",
+      "community": 5,
+      "norm_label": "rendertext()"
+    },
+    {
+      "label": "setupTextHover()",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L24",
+      "id": "components_welcome_setuptexthover",
+      "community": 5,
+      "norm_label": "setuptexthover()"
+    },
+    {
+      "label": "DrawnPortfolio()",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L60",
+      "id": "components_welcome_drawnportfolio",
+      "community": 5,
+      "norm_label": "drawnportfolio()"
+    },
+    {
+      "label": "TaglineWords()",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L123",
+      "id": "components_welcome_taglinewords",
+      "community": 5,
+      "norm_label": "taglinewords()"
+    },
+    {
+      "label": "Welcome()",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L177",
+      "id": "components_welcome_welcome",
+      "community": 5,
+      "norm_label": "welcome()"
+    },
+    {
+      "label": "WindowControls.jsx",
+      "file_type": "code",
+      "source_file": "src/components/WindowControls.jsx",
+      "source_location": "L1",
+      "id": "src_components_windowcontrols_jsx",
+      "community": 0,
+      "norm_label": "windowcontrols.jsx"
+    },
+    {
+      "label": "WindowControls()",
+      "file_type": "code",
+      "source_file": "src/components/WindowControls.jsx",
+      "source_location": "L1",
+      "id": "components_windowcontrols_windowcontrols",
+      "community": 0,
+      "norm_label": "windowcontrols()"
+    },
+    {
+      "label": "Navbar.jsx",
+      "file_type": "code",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L1",
+      "id": "src_components_navbar_jsx",
+      "community": 1,
+      "norm_label": "navbar.jsx"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L5",
+      "id": "components_navbar_navbar",
+      "community": 1,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "Dock.jsx",
+      "file_type": "code",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L1",
+      "id": "src_components_dock_jsx",
+      "community": 1,
+      "norm_label": "dock.jsx"
+    },
+    {
+      "label": "Dock()",
+      "file_type": "code",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L7",
+      "id": "components_dock_dock",
+      "community": 1,
+      "norm_label": "dock()"
+    },
+    {
+      "label": "BackgroundSelector.jsx",
+      "file_type": "code",
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": "L1",
+      "id": "src_components_backgroundselector_jsx",
+      "community": 6,
+      "norm_label": "backgroundselector.jsx"
+    },
+    {
+      "label": "wallpapers",
+      "file_type": "code",
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": "L5",
+      "id": "components_backgroundselector_wallpapers",
+      "community": 6,
+      "norm_label": "wallpapers"
+    },
+    {
+      "label": "BackgroundSelector()",
+      "file_type": "code",
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": "L10",
+      "id": "components_backgroundselector_backgroundselector",
+      "community": 6,
+      "norm_label": "backgroundselector()"
+    },
+    {
+      "label": "AboutMe.jsx",
+      "file_type": "code",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L1",
+      "id": "src_windows_aboutme_jsx",
+      "community": 1,
+      "norm_label": "aboutme.jsx"
+    },
+    {
+      "label": "AboutMe()",
+      "file_type": "code",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L11",
+      "id": "windows_aboutme_aboutme",
+      "community": 1,
+      "norm_label": "aboutme()"
+    },
+    {
+      "label": "AboutMeWindow",
+      "file_type": "code",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L290",
+      "id": "windows_aboutme_aboutmewindow",
+      "community": 1,
+      "norm_label": "aboutmewindow"
+    },
+    {
+      "label": "Projects.jsx",
+      "file_type": "code",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L1",
+      "id": "src_windows_projects_jsx",
+      "community": 0,
+      "norm_label": "projects.jsx"
+    },
+    {
+      "label": "ProjectVideo()",
+      "file_type": "code",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L7",
+      "id": "windows_projects_projectvideo",
+      "community": 0,
+      "norm_label": "projectvideo()"
+    },
+    {
+      "label": "Projects()",
+      "file_type": "code",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L52",
+      "id": "windows_projects_projects",
+      "community": 0,
+      "norm_label": "projects()"
+    },
+    {
+      "label": "ProjectsWindow",
+      "file_type": "code",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L211",
+      "id": "windows_projects_projectswindow",
+      "community": 0,
+      "norm_label": "projectswindow"
+    },
+    {
+      "label": "Terminal.jsx",
+      "file_type": "code",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L1",
+      "id": "src_windows_terminal_jsx",
+      "community": 0,
+      "norm_label": "terminal.jsx"
+    },
+    {
+      "label": "Terminal()",
+      "file_type": "code",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L5",
+      "id": "windows_terminal_terminal",
+      "community": 0,
+      "norm_label": "terminal()"
+    },
+    {
+      "label": "TerminalWindow",
+      "file_type": "code",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L49",
+      "id": "windows_terminal_terminalwindow",
+      "community": 0,
+      "norm_label": "terminalwindow"
+    },
+    {
+      "label": "Contact.jsx",
+      "file_type": "code",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L1",
+      "id": "src_windows_contact_jsx",
+      "community": 0,
+      "norm_label": "contact.jsx"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L4",
+      "id": "windows_contact_contact",
+      "community": 0,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "ContactWindow",
+      "file_type": "code",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L104",
+      "id": "windows_contact_contactwindow",
+      "community": 0,
+      "norm_label": "contactwindow"
+    },
+    {
+      "label": "Photography.jsx",
+      "file_type": "code",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L1",
+      "id": "src_windows_photography_jsx",
+      "community": 0,
+      "norm_label": "photography.jsx"
+    },
+    {
+      "label": "PhotoViewer()",
+      "file_type": "code",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L6",
+      "id": "windows_photography_photoviewer",
+      "community": 0,
+      "norm_label": "photoviewer()"
+    },
+    {
+      "label": "Photography()",
+      "file_type": "code",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L37",
+      "id": "windows_photography_photography",
+      "community": 0,
+      "norm_label": "photography()"
+    },
+    {
+      "label": "PhotographyWindow",
+      "file_type": "code",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L97",
+      "id": "windows_photography_photographywindow",
+      "community": 0,
+      "norm_label": "photographywindow"
+    },
+    {
+      "label": "Store.jsx",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": "L1",
+      "id": "src_store_store_jsx",
+      "community": 1,
+      "norm_label": "store.jsx"
+    },
+    {
+      "label": "useWindowStore",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": "L8",
+      "id": "store_store_usewindowstore",
+      "community": 1,
+      "norm_label": "usewindowstore"
+    },
+    {
+      "label": "Vite Path Aliases",
+      "file_type": "rationale",
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "vite_config_aliases",
+      "community": 4,
+      "norm_label": "vite path aliases"
+    },
+    {
+      "label": "App Root Component",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_root_component",
+      "community": 4,
+      "norm_label": "app root component"
+    },
+    {
+      "label": "GA4 Analytics Injection",
+      "file_type": "rationale",
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ga4_tracking",
+      "community": 4,
+      "norm_label": "ga4 analytics injection"
+    },
+    {
+      "label": "Background Transition State Pattern",
+      "file_type": "rationale",
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "background_state_pattern",
+      "community": 4,
+      "norm_label": "background transition state pattern"
+    },
+    {
+      "label": "WindowWrapper HOC",
+      "file_type": "code",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "window_wrapper_hoc",
+      "community": 2,
+      "norm_label": "windowwrapper hoc"
+    },
+    {
+      "label": "Draggable Window Pattern",
+      "file_type": "rationale",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "draggable_window_pattern",
+      "community": 2,
+      "norm_label": "draggable window pattern"
+    },
+    {
+      "label": "Minimize/Restore GSAP Animation",
+      "file_type": "rationale",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "minimize_restore_animation",
+      "community": 2,
+      "norm_label": "minimize/restore gsap animation"
+    },
+    {
+      "label": "useWindowStore (Zustand+Immer)",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "store_use_window_store",
+      "community": 3,
+      "norm_label": "usewindowstore (zustand+immer)"
+    },
+    {
+      "label": "openWindow action",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "store_open_window",
+      "community": 3,
+      "norm_label": "openwindow action"
+    },
+    {
+      "label": "closeWindow action",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "store_close_window",
+      "community": 3,
+      "norm_label": "closewindow action"
+    },
+    {
+      "label": "focusWindow action",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "store_focus_window",
+      "community": 2,
+      "norm_label": "focuswindow action"
+    },
+    {
+      "label": "minimizeWindow action (referenced)",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "store_minimize_window",
+      "community": 2,
+      "norm_label": "minimizewindow action (referenced)"
+    },
+    {
+      "label": "restoreWindow action (referenced)",
+      "file_type": "code",
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "store_restore_window",
+      "community": 3,
+      "norm_label": "restorewindow action (referenced)"
+    },
+    {
+      "label": "WINDOW_CONFIG initial state",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "constants_window_config",
+      "community": 3,
+      "norm_label": "window_config initial state"
+    },
+    {
+      "label": "dockApps definition",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "constants_dock_apps",
+      "community": 3,
+      "norm_label": "dockapps definition"
+    },
+    {
+      "label": "techStack definition",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "constants_tech_stack",
+      "community": 2,
+      "norm_label": "techstack definition"
+    },
+    {
+      "label": "gallery photo array",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "constants_gallery",
+      "community": 2,
+      "norm_label": "gallery photo array"
+    },
+    {
+      "label": "navLinks",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "constants_nav_links",
+      "community": 4,
+      "norm_label": "navlinks"
+    },
+    {
+      "label": "locations (file system)",
+      "file_type": "code",
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "constants_locations",
+      "community": 9,
+      "norm_label": "locations (file system)"
+    },
+    {
+      "label": "Dock Component",
+      "file_type": "code",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dock_component",
+      "community": 3,
+      "norm_label": "dock component"
+    },
+    {
+      "label": "Dock Magnification (Gaussian intensity)",
+      "file_type": "rationale",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dock_magnification_pattern",
+      "community": 3,
+      "norm_label": "dock magnification (gaussian intensity)"
+    },
+    {
+      "label": "Welcome Component",
+      "file_type": "code",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "welcome_component",
+      "community": 3,
+      "norm_label": "welcome component"
+    },
+    {
+      "label": "Variable Font Weight Hover",
+      "file_type": "rationale",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "variable_font_hover_pattern",
+      "community": 3,
+      "norm_label": "variable font weight hover"
+    },
+    {
+      "label": "DrawnPortfolio clip-path reveal",
+      "file_type": "rationale",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "drawn_portfolio_clip_reveal",
+      "community": 3,
+      "norm_label": "drawnportfolio clip-path reveal"
+    },
+    {
+      "label": "Navbar Component",
+      "file_type": "code",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "navbar_component",
+      "community": 4,
+      "norm_label": "navbar component"
+    },
+    {
+      "label": "WindowControls Component",
+      "file_type": "code",
+      "source_file": "src/components/WindowControls.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "window_controls_component",
+      "community": 2,
+      "norm_label": "windowcontrols component"
+    },
+    {
+      "label": "BackgroundSelector Component",
+      "file_type": "code",
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "background_selector_component",
+      "community": 4,
+      "norm_label": "backgroundselector component"
+    },
+    {
+      "label": "AboutMe Window",
+      "file_type": "code",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "about_me_window",
+      "community": 2,
+      "norm_label": "aboutme window"
+    },
+    {
+      "label": "Projects Window",
+      "file_type": "code",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "projects_window",
+      "community": 2,
+      "norm_label": "projects window"
+    },
+    {
+      "label": "ProjectVideo localStorage persistence",
+      "file_type": "rationale",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "project_video_persistence",
+      "community": 2,
+      "norm_label": "projectvideo localstorage persistence"
+    },
+    {
+      "label": "Terminal (Tech Stack) Window",
+      "file_type": "code",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "terminal_window",
+      "community": 2,
+      "norm_label": "terminal (tech stack) window"
+    },
+    {
+      "label": "Contact Window",
+      "file_type": "code",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "contact_window",
+      "community": 2,
+      "norm_label": "contact window"
+    },
+    {
+      "label": "Photography Window",
+      "file_type": "code",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "photography_window",
+      "community": 2,
+      "norm_label": "photography window"
+    },
+    {
+      "label": "PhotoViewer Modal",
+      "file_type": "code",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "photo_viewer",
+      "community": 2,
+      "norm_label": "photoviewer modal"
+    },
+    {
+      "label": "macOS Desktop Metaphor",
+      "file_type": "rationale",
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "macos_desktop_metaphor",
+      "community": 4,
+      "norm_label": "macos desktop metaphor"
+    },
+    {
+      "label": "Vite Entry HTML",
+      "file_type": "document",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html",
+      "community": 4,
+      "norm_label": "vite entry html"
+    },
+    {
+      "label": "ESLint Flat Config",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "eslint_config",
+      "community": 10,
+      "norm_label": "eslint flat config"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_jsx",
+      "target": "src_app_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_navbar_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_welcome_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_dock_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_windows_terminal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_windows_aboutme_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_windows_projects_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_windows_photography_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_hoc_windowwrapper_jsx",
+      "target": "src_store_store_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_hoc_windowwrapper_jsx",
+      "target": "hoc_windowwrapper_windowwrapper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_windows_aboutme_jsx",
+      "target": "src_hoc_windowwrapper_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_windows_projects_jsx",
+      "target": "src_hoc_windowwrapper_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_windows_terminal_jsx",
+      "target": "src_hoc_windowwrapper_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_windows_contact_jsx",
+      "target": "src_hoc_windowwrapper_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "src_hoc_windowwrapper_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_navlinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_navicons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_dockapps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_blogposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_techstack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_socials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_photoslinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_gallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_work_location",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L409",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_about_location",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L462",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_resume_location",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L481",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_trash_location",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L509",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_locations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/index.js",
+      "source_location": "L518",
+      "weight": 1.0,
+      "source": "src_constants_index_js",
+      "target": "constants_index_window_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_navbar_jsx",
+      "target": "src_constants_index_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_dock_jsx",
+      "target": "src_constants_index_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_windows_terminal_jsx",
+      "target": "src_constants_index_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "src_constants_index_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/Store.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_store_store_jsx",
+      "target": "src_constants_index_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_navbar_jsx",
+      "target": "constants_index_navlinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_dock_jsx",
+      "target": "constants_index_dockapps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_windows_terminal_jsx",
+      "target": "constants_index_techstack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "constants_index_gallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/Store.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_store_store_jsx",
+      "target": "constants_index_window_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_welcome_jsx",
+      "target": "components_welcome_font_weights",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_components_welcome_jsx",
+      "target": "components_welcome_rendertext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_components_welcome_jsx",
+      "target": "components_welcome_setuptexthover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "src_components_welcome_jsx",
+      "target": "components_welcome_drawnportfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "src_components_welcome_jsx",
+      "target": "components_welcome_taglinewords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "src_components_welcome_jsx",
+      "target": "components_welcome_welcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "components_welcome_welcome",
+      "target": "components_welcome_rendertext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/WindowControls.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_windowcontrols_jsx",
+      "target": "components_windowcontrols_windowcontrols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_windows_aboutme_jsx",
+      "target": "src_components_windowcontrols_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_windows_projects_jsx",
+      "target": "src_components_windowcontrols_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_windows_terminal_jsx",
+      "target": "src_components_windowcontrols_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_windows_contact_jsx",
+      "target": "src_components_windowcontrols_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "src_components_windowcontrols_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_navbar_jsx",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_dock_jsx",
+      "target": "src_store_store_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_components_dock_jsx",
+      "target": "components_dock_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_dock_dock",
+      "target": "store_store_usewindowstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_backgroundselector_jsx",
+      "target": "components_backgroundselector_wallpapers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_components_backgroundselector_jsx",
+      "target": "components_backgroundselector_backgroundselector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_windows_aboutme_jsx",
+      "target": "src_store_store_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_windows_aboutme_jsx",
+      "target": "windows_aboutme_aboutme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L290",
+      "weight": 1.0,
+      "source": "src_windows_aboutme_jsx",
+      "target": "windows_aboutme_aboutmewindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "windows_aboutme_aboutme",
+      "target": "store_store_usewindowstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_windows_projects_jsx",
+      "target": "windows_projects_projectvideo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_windows_projects_jsx",
+      "target": "windows_projects_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "src_windows_projects_jsx",
+      "target": "windows_projects_projectswindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_windows_terminal_jsx",
+      "target": "windows_terminal_terminal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_windows_terminal_jsx",
+      "target": "windows_terminal_terminalwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_windows_contact_jsx",
+      "target": "windows_contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "src_windows_contact_jsx",
+      "target": "windows_contact_contactwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "windows_photography_photoviewer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "windows_photography_photography",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "src_windows_photography_jsx",
+      "target": "windows_photography_photographywindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/Store.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_store_store_jsx",
+      "target": "store_store_usewindowstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vite_config_aliases",
+      "target": "app_root_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "navbar_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "welcome_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "dock_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "terminal_window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "about_me_window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "projects_window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_root_component",
+      "target": "photography_window"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ga4_tracking",
+      "target": "app_root_component"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "background_state_pattern",
+      "target": "app_root_component"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "macos_desktop_metaphor",
+      "target": "app_root_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "index_html",
+      "target": "app_root_component"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/components/BackgroundSelector.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "background_selector_component",
+      "target": "app_root_component"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "window_wrapper_hoc",
+      "target": "store_focus_window"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "window_wrapper_hoc",
+      "target": "store_close_window"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "window_wrapper_hoc",
+      "target": "store_minimize_window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "window_wrapper_hoc",
+      "target": "store_use_window_store"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "draggable_window_pattern",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "minimize_restore_animation",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "about_me_window",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "projects_window",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "terminal_window",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contact_window",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "photography_window",
+      "target": "window_wrapper_hoc"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/store/Store.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "store_use_window_store",
+      "target": "constants_window_config"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "about_me_window",
+      "target": "store_open_window"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dock_component",
+      "target": "store_open_window"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dock_component",
+      "target": "store_close_window"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dock_component",
+      "target": "store_restore_window"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/constants/index.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "constants_dock_apps",
+      "target": "constants_window_config"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dock_component",
+      "target": "constants_dock_apps"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "terminal_window",
+      "target": "constants_tech_stack"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "photography_window",
+      "target": "constants_gallery"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "navbar_component",
+      "target": "constants_nav_links"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dock_magnification_pattern",
+      "target": "dock_component"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/components/Dock.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dock_magnification_pattern",
+      "target": "variable_font_hover_pattern"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "variable_font_hover_pattern",
+      "target": "welcome_component"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Welcome.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "drawn_portfolio_clip_reveal",
+      "target": "welcome_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "about_me_window",
+      "target": "window_controls_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "projects_window",
+      "target": "window_controls_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Terminal.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "terminal_window",
+      "target": "window_controls_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contact_window",
+      "target": "window_controls_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "photography_window",
+      "target": "window_controls_component"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/AboutMe.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "about_me_window",
+      "target": "projects_window"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/windows/Contact.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contact_window",
+      "target": "about_me_window"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Projects.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "project_video_persistence",
+      "target": "projects_window"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/windows/Photography.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "photography_window",
+      "target": "photo_viewer"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "window_system_pattern",
+      "label": "Window System (HOC + Store + Controls)",
+      "nodes": [
+        "window_wrapper_hoc",
+        "store_use_window_store",
+        "window_controls_component",
+        "constants_window_config"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hoc/WindowWrapper.jsx"
+    },
+    {
+      "id": "dock_launch_flow",
+      "label": "Dock Launch Flow",
+      "nodes": [
+        "dock_component",
+        "constants_dock_apps",
+        "store_use_window_store",
+        "window_wrapper_hoc"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Dock.jsx"
+    },
+    {
+      "id": "gsap_hover_intensity_motif",
+      "label": "GSAP Mouse-Distance Intensity Motif",
+      "nodes": [
+        "dock_component",
+        "welcome_component",
+        "dock_magnification_pattern",
+        "variable_font_hover_pattern"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/components/Dock.jsx"
+    }
+  ],
+  "built_at_commit": "99c0a12ddff5feedcd16f6e8201dea822d2c132f"
+}

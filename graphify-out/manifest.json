@@ -1,0 +1,86 @@
+{
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/vite.config.js": {
+    "mtime": 1766996475.0402398,
+    "hash": "0e280161995cddc6552085be90ee9538"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/eslint.config.js": {
+    "mtime": 1766967070.5470061,
+    "hash": "49c8473bcfcec3aef596a5fb04a6df06"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/main.jsx": {
+    "mtime": 1766969217.616386,
+    "hash": "7ef44fb1a1110662e1c01829cf42528b"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/App.jsx": {
+    "mtime": 1770318335.3874297,
+    "hash": "3424094d744d38066cca517576252f00"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/hoc/WindowWrapper.jsx": {
+    "mtime": 1767500007.4668574,
+    "hash": "65bb1b936140fb5dd004b98a13465c52"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/constants/index.js": {
+    "mtime": 1770318025.895401,
+    "hash": "aa37bba0bf7ebfdef5baa0a23b07d5b7"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/components/Welcome.jsx": {
+    "mtime": 1767497662.2093303,
+    "hash": "46fbba6fb5470a111f8b305f5c276085"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/components/WindowControls.jsx": {
+    "mtime": 1767382944.5923877,
+    "hash": "a0d3d9ae9a458eff5f0ac6b51b2589e1"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/components/Navbar.jsx": {
+    "mtime": 1767474655.7639813,
+    "hash": "786b1af0e73341fee601220ced6108c2"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/components/Dock.jsx": {
+    "mtime": 1767487364.524928,
+    "hash": "f700a838666f946a4e36ff571ea67b20"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/components/BackgroundSelector.jsx": {
+    "mtime": 1767424944.0165963,
+    "hash": "6c0b9e2a64ed9e6c1e2787bfb7c200a1"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/windows/AboutMe.jsx": {
+    "mtime": 1767500926.6482768,
+    "hash": "17a35fc33df1b28bfa48a951f1f9a5cf"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/windows/Projects.jsx": {
+    "mtime": 1770317862.706104,
+    "hash": "cff6ff7c73e7de744d81977df3dd48ad"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/windows/Terminal.jsx": {
+    "mtime": 1767383617.1837468,
+    "hash": "591cd839d21988d3014b87c33b4838e0"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/windows/Contact.jsx": {
+    "mtime": 1767391252.405748,
+    "hash": "2a07870efafac01339fc1972025ea8ae"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/windows/Photography.jsx": {
+    "mtime": 1770318117.6758533,
+    "hash": "b64e59df9cfce289d78d7d282e87766f"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/src/store/Store.jsx": {
+    "mtime": 1767389496.2440894,
+    "hash": "61cef44cff826bfe9903901b8e6c8d74"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/index.html": {
+    "mtime": 1767498605.8360546,
+    "hash": "71271be1b3434eb7a0faa1c5af5f7721"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/README.md": {
+    "mtime": 1766968081.0305324,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/CLAUDE.md": {
+    "mtime": 1767380886.49429,
+    "hash": "196f93cea1d22d1002dca3895b3eed41"
+  },
+  "/Applications/projects/Peronsal Website/Justin_Macfolio/public/files/resume.pdf": {
+    "mtime": 1766967108.3518283,
+    "hash": "9b4e1dae6b4550ef7942aba2f758e81a"
+  }
+}
